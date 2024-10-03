@@ -6,33 +6,49 @@ import { Box, Stack, Typography } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
+import axios from 'axios';
 import { useFormik } from 'formik';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 
+
 const EngagementImageChanger = () => {
 
     const [image, SetImage] = useState([])
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    // useEffect(() => {
+    //     const initialImages = generateRandomImageUrl(200);
+    //     SetImage(initialImages);
+    // }, [])
 
     useEffect(() => {
-        const initialImages = generateRandomImageUrl(200);
-        SetImage(initialImages);
-    }, [])
+        const fetchImages = async () => {
+            try {
+                const res = await axios.get('http://localhost:4500/api/images'); // Replace with your backend URL
+                SetImage(res.data); // Set images from the response
+                console.log(res.data)
+            } catch (err) {
+                setError('Error fetching images');
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchImages();
+    }, []);
 
-    const generateRandomImageUrl = ((count) => {
-        const width = 300; // Set desired width
-        const height = 300; // Set desired height
+    // const generateRandomImageUrl = ((count) => {
+    //     const width = 300; // Set desired width
+    //     const height = 300; // Set desired height
 
-        return Array.from({ length: count }, () => ({
-            url: `https://picsum.photos/${width}/${height}?random=${Math.floor(Math.random() * 1000)}`,
-            text: faker.person.firstName("male"),
-        }))
-    })
+    //     return Array.from({ length: count }, () => ({
+    //         url: `https://picsum.photos/${width}/${height}?random=${Math.floor(Math.random() * 1000)}`,
+    //         text: faker.person.firstName("male"),
+    //     }))
+    // })
 
-    useMemo(() => {
-        generateRandomImageUrl();
-    }, [image])
 
     const handleMouseEnter = () => {
         //SetImage(generateRandomImageUrl(200));

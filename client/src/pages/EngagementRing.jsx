@@ -52,8 +52,8 @@ const EngagementRing = () => {
             <div className='mt-14'>
                 <Typography variant='h5' className='sm:text-center lg:text-left'>MORE TO EXPLORE</Typography>
                 <Stack direction={"row"} justifyContent={"space-between"} className='sm:flex-wrap mt-8'>
-                    {EngagemenExploreImages.map(({ url, text }) => (
-                        <Box height={"333px"} width={"379px"} overflow={"hidden"} className="sm:mb-5 m-auto">
+                    {EngagemenExploreImages.map(({ url, text }, index) => (
+                        <Box height={"333px"} width={"379px"} overflow={"hidden"} key={index} className="sm:mb-5 m-auto">
                             <div className='h-[95%] w-[95%] overflow-hidden'>
                                 <img src={url} className="hover:scale-[1.1] transition-all duration-300 object-cover h-full w-full" alt="" />
                             </div>

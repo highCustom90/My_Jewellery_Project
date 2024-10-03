@@ -36,31 +36,31 @@ const diamondShapeImage = [
 const otherEngagementRingImage = [
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/32/BE1D4222_OV_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/13/BE1S6013_RD_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/2D/BE1D4333_RD_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/72/BE1D804_OV_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/72/BE1D804_OV_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/20/BE1D4433_OV_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
     {
         url: "https://image.brilliantearth.com/cdn-cgi/image/width=500,height=500,quality=85,format=auto/https://image.brilliantearth.com/media/carat_image/EC/BE1D032_OV_75ct_yellow_side1.jpg?new=1",
-        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290"
+        text: "Luxe Nadia Pavé Diamond Ring (1 / 2 ct.tw.) $ 2, 290",
     },
 
 ]
@@ -95,8 +95,8 @@ const caratImage = [
     "src/assets/1_CT/ci1carat.webp",
     "src/assets/1.50_CT/ci1_5carat.png",
     "src/assets/2_CT/ci2carat.webp",
-    // "https://image.brilliantearth.com/media/diamond_ring_vto/8E/BE1D3939_yellow_Round_top_250_carat.png",
-    // "https://image.brilliantearth.com/media/diamond_ring_vto/58/BE1D3939_yellow_Round_top_5_carat.png"
+   // "https://image.brilliantearth.com/media/diamond_ring_vto/8E/BE1D3939_yellow_Round_top_250_carat.png",
+    // "https://image.brilliantearth.com/media/diamond_ring_vto/58/BE1D3939_yellow_Round_top_5_carat.png" 
 ]
 
 

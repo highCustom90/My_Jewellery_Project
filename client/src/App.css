@@ -1,50 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  user-select: none;
 }
 
 /* box slider */
 .box-slider .swiper-slide::after {
-    content: "Shop Now";
-    display: flex;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
+  content: "Shop Now";
+  display: flex;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .box-slider .swiper-slide:hover:after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .app-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-  
-  .hand-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .hand-image {
-    width: 300px; /* Adjust size as needed */
-    transition: filter 0.3s ease; /* Smooth transition for color change */
-  }
-  
-  .slider-container {
-    margin-top: 20px;
-  }
-  
-  .slider {
-    width: 300px; /* Adjust width of the slider */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.hand-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hand-image {
+  width: 300px;
+  /* Adjust size as needed */
+  transition: filter 0.3s ease;
+  /* Smooth transition for color change */
+}
+
+.slider-container {
+  margin-top: 20px;
+}
+
+.slider {
+  width: 300px;
+  /* Adjust width of the slider */
+}

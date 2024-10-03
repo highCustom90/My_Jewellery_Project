@@ -13,6 +13,7 @@ import { Slider1 } from '../sliders/Slider1';
 import { caratImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
 
 const SingleProductDetailShow = () => {
+  
   function preventHorizontalKeyboardNavigation(event) {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
@@ -228,7 +229,6 @@ const SingleProductDetailShow = () => {
   )
 
 }
-
 
 
 
