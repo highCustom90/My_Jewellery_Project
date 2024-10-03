@@ -1,13 +1,22 @@
 const express = require("express");
+const cloudinary = require('cloudinary').v2;
 const cors = require("cors");
 const bcrypt = require("bcrypt"); // For password hashing
 const User = require("./models/user");
 const UserAccounts = require("./models/userAccounts");
-
+require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+cloudinary.config({
+    cloud_name: 'dedhgrb2a',
+    api_key: '817161877541545',
+    api_secret: 'zsAHNnkWm9e0fyZociGQCdvNQKg',
+    secure: true,
+    cname: "images.High_Custom_Jewellers.com"
+});
 
+// this is drop hint api
 app.post("/login", async (req, res) => {
     try {
         const { email, name } = req.body;
@@ -20,18 +29,19 @@ app.post("/login", async (req, res) => {
     }
 });
 
+// this is user login api
 app.get("/login/user", async (req, res) => {
 
     try {
         const { email, password } = req.body;
 
-        // Validate if password exists
+
         if (!password) {
             return res.status(400).send({ message: "Password is required" });
         }
 
-        // Find user by email
-        const user = await UserAccounts.findOne({ email: email }).select("-password");
+
+        const user = await UserAccounts.findOne({ email: email });
 
         // Compare the password using bcrypt
         const validPassword = await bcrypt.compare(password, user.password);
@@ -46,13 +56,13 @@ app.get("/login/user", async (req, res) => {
 
         res.status(200).json({ message: "Login successful" });
     } catch (error) {
-        // Log any potential errors during the process
+
         console.error("Error during login:", error);
         res.status(500).send({ message: "Server error" });
     }
 });
 
-
+// this is user signin api
 app.post("/signin/user", async (req, res) => {
     try {
         const { email, name, password } = req.body;
@@ -73,10 +83,26 @@ app.post("/signin/user", async (req, res) => {
     }
 });
 
-// app.get("/cart", async (req, res) => {
-//     // Handle cart logic here
-//     res.status(200).send({ message: "Cart endpoint is empty" });
-// });
+
+// get all images from cloudinary
+app.get('/api/images', (req, res) => {
+    cloudinary.api.resources(
+        {
+            type: 'upload',
+            // prefix: 'your-folder/', // Add folder path if needed
+            max_results: 500,       // You can adjust this as needed (max 500)
+        },
+        function (error, result) {
+            if (error) {
+                res.status(500).json({ error });
+            } else {
+                res.json(result.resources);
+            }
+        }
+    );
+});
+
+
 
 app.listen(4500, () => {
     console.log("Server is running on port 4500");

@@ -11,7 +11,7 @@ function App() {
   const { theme } = useSelector((state) => state.themeReducer);
 
   return (
-    <div className={`${theme === 'dark' ? "bg-slate-950 text-white" : "bg-white text-black"}`} >
+    <div className={`${theme === 'dark' ? "bg-slate-950 text-white" : "bg-white text-black"}`}>
       <Navbar />
       <AllRoutes />
       <Footer />
