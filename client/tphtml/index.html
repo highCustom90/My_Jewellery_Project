@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Image on Mouse Drag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="rotate-container">
+        <!-- <img src="image.png" alt="Ring" class="rotating-image" id="ringImage"> -->
+        <img src="./rose3d.gif" alt="Ring" class="rotating-image" id="ringImage">
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Model Movement</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .rotate-container {
+            width: 500px;
+            height: 500px;
+            perspective: 1000px;
+            /* Creates a 3D perspective for video depth */
+        }
+
+        .rotating-image {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform-origin: center;
+            /* Focus on the center of the video */
+            transition: transform 0.1s ease-out;
+            /* Smooth interaction */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotate-container">
+        <video src="./rose-vmake.mp4" autoplay loop muted class="rotating-image" id="ringImage"></video>
+    </div>
+
+    <script>
+        const video = document.getElementById("ringImage");
+        const rotateContainer = document.querySelector(".rotate-container");
+
+        // Function to handle mouse movement and simulate object movement in the video
+        function handleMouseMove(event) {
+            const rect = rotateContainer.getBoundingClientRect();
+            const xAxis = (event.clientY - rect.top - rect.height / 2) / 30; // Simulate 3D rotation on X-axis
+            const yAxis = (rect.width / 2 - (event.clientX - rect.left)) / 30; // Simulate 3D rotation on Y-axis
+            const zAxis = 10; // Adjust the z-axis to simulate depth
+
+            // Apply transformation to video to simulate the object responding to mouse movement
+            video.style.transform = `rotateX(${xAxis}deg) rotateY(${yAxis}deg) translateZ(${zAxis}px)`;
+        }
+
+        // Attach the mousemove event to rotateContainer for tracking movement
+        rotateContainer.addEventListener("mousemove", handleMouseMove);
+    </script>
+</body>
+
+</html> -->
