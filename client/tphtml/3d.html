@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate 3D Model on Mouse Drag</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Three.js and required dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script>
+        let scene, camera, renderer, controls;
+
+        function init() {
+            // Create the scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xdddddd);
+
+            // Set up the camera
+            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
+            camera.position.set(800, 100, 1000);
+
+            // Set up the renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Set up lighting
+            let ambientLight = new THREE.AmbientLight(0x404040, 2); // Soft ambient light
+            scene.add(ambientLight);
+
+            let directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(0, 1, 1).normalize();
+            scene.add(directionalLight);
+
+            // Set up OrbitControls for mouse drag functionality
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.enableZoom = true;
+
+            // Load the 3D model using GLTFLoader
+            const loader = new THREE.GLTFLoader();
+            loader.load('scene.gltf', function (gltf) {
+                let model = gltf.scene;
+                model.scale.set(0.5, 0.5, 0.5); // Adjust the scale to fit the scene
+                scene.add(model);
+                animate(); // Start the animation loop after the model is loaded
+            }, undefined, function (error) {
+                console.error('An error happened during loading the model', error);
+            });
+
+            // Resize handler
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        // Adjust the camera and renderer on window resize
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // Only required if controls.enableDamping is true, or if controls.autoRotate is true
+            renderer.render(scene, camera);
+        }
+
+        // Initialize the scene
+        init();
+    </script>
+</body>
+
+</html>

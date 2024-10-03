@@ -1,0 +1,29 @@
+/* Container for the rotating image */
+.rotate-container {
+    display: inline-block;
+    perspective: 1000px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: grab;
+}
+
+/* Style the image */
+.rotating-image {
+    width: 300px;
+    /* Adjust to your desired size */
+    transition: transform 0.1s;
+}
+
+.rotate-container {
+    perspective: 1000px;
+    /* Enables 3D effect */
+}
+
+#ringImage {
+    width: 300px;
+    /* Adjust image size */
+    transition: transform 0.1s ease-out;
+    /* Smooth rotation */
+    cursor: grab;
+}
