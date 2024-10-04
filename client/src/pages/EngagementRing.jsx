@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { Engagement1Slider } from '../sliders/Slider1';
 
-import { EngagementAccordian, EngagementImageChanger } from '../utils/HelperFunctions';
+import { EngagementAccordion, EngagementImageChanger } from '../utils/HelperFunctions';
 import { EngagemenExploreImages, Engagement1SliderImage } from '../utils/AllImagesProvider';
 
 
@@ -65,7 +65,7 @@ const EngagementRing = () => {
             </div>
 
             {/* accordion of engagement ring */}
-            <EngagementAccordian />
+            <EngagementAccordion />
 
         </div>
     )

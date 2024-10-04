@@ -1,3 +1,91 @@
+
+// home image provider
+
+
+const sec1Image = [
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F1e37173274224cf09a03ff4185711380",
+        text: "Three Stone Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fd8e00f0888c24bc88dd38a62804c5b05",
+        text: "Nature Inspired Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F5bf074cc27e74fbcbcb5d15a077e9db2",
+        text: "Solitaire Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F6b3af857d629481ba1f0398b76c88156",
+        text: "Bridal Sets"
+    },
+]
+const HomePageSlider = [
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F31e008b11e6f457e9d0240435c77a313",
+        text: "Engagement Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F86e35f29cae14a08bb6fcc6a25bca484",
+        text: "Women's Wedding Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fa6b8799f188d4d38a8ed85460df45a29",
+        text: "Men's Wedding Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fc566e030fcb54568af048fbe0b59b22a",
+        text: "Gemstone Rings"
+    },
+    {
+        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fcaa9166fa9e5495db554c3734dc0071c",
+        text: "Fine Jewelry"
+    }
+]
+const diamondTypeImage = [
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F55138dcf7c3047dca6b5977b9bceaf4c&w=96&q=75&dpl=v1726568742694",
+        text: "Round"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F22c1825bc7cd4236acfc621064075d10&w=96&q=75&dpl=v1726568742694",
+        text: "Emerald"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F2acc984ca1624bf4839d6f375ddc059a&w=96&q=75&dpl=v1726568742694",
+        text: "Cushion"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F7e2bc1d339c04bfb86ccce73b23dff05&w=96&q=75&dpl=v1726568742694",
+        text: "Fusion"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F7622eace49424c43aba2b2036a6061fb&w=96&q=75&dpl=v1726568742694",
+        text: "Pear"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fbe5ac40634a44cafb9d284665c460ae3&w=96&q=75&dpl=v1726568742694",
+        text: "Radiant"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F1d10816b762443a7a26ab81434577157&w=96&q=75&dpl=v1726568742694",
+        text: "Princess"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fdf8bb60052394b09aaaebfe5ac0cb15c&w=96&q=75&dpl=v1726568742694",
+        text: "Marquise"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fa7b5fe16e8304920a5ac539739b968b6&w=96&q=75&dpl=v1726568742694",
+        text: "Asscher"
+    },
+    {
+        url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fa4fe27053d254a218e0a7f3c15526a0a&w=96&q=75&dpl=v1726568742694",
+        text: "Heart"
+    },
+]
+
+
 // here all singleproduct images
 const multipleProductImage = [
     {
@@ -95,7 +183,7 @@ const caratImage = [
     "src/assets/1_CT/ci1carat.webp",
     "src/assets/1.50_CT/ci1_5carat.png",
     "src/assets/2_CT/ci2carat.webp",
-   // "https://image.brilliantearth.com/media/diamond_ring_vto/8E/BE1D3939_yellow_Round_top_250_carat.png",
+    // "https://image.brilliantearth.com/media/diamond_ring_vto/8E/BE1D3939_yellow_Round_top_250_carat.png",
     // "https://image.brilliantearth.com/media/diamond_ring_vto/58/BE1D3939_yellow_Round_top_5_carat.png" 
 ]
 
@@ -300,5 +388,5 @@ const EngagemenExploreImages = [
 export {
     multipleProductImage, diamondShapeImage, otherEngagementRingImage, recentlyViewedImage, caratImage, shopBySlide, popularWeddingRingImage, signatureExplore, ringEducation, missionPillar,
     EngagemenExploreImages,
-    Engagement1SliderImage,
+    Engagement1SliderImage,sec1Image,HomePageSlider,diamondTypeImage
 }

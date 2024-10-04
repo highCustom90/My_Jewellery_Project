@@ -9,12 +9,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 cloudinary.config({
-    cloud_name: 'dedhgrb2a',
-    api_key: '817161877541545',
-    api_secret: 'zsAHNnkWm9e0fyZociGQCdvNQKg',
+    cloud_name: process.env.CLOUDINARY_NAME,
+    api_key: process.env.CLOUDINARY_API,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
     secure: true,
     cname: "images.High_Custom_Jewellers.com"
 });
+
 
 // this is drop hint api
 app.post("/login", async (req, res) => {
@@ -89,8 +90,7 @@ app.get('/api/images', (req, res) => {
     cloudinary.api.resources(
         {
             type: 'upload',
-            // prefix: 'your-folder/', // Add folder path if needed
-            max_results: 500,       // You can adjust this as needed (max 500)
+            max_results: 500,// You can adjust this as needed (max 500)
         },
         function (error, result) {
             if (error) {
@@ -101,6 +101,8 @@ app.get('/api/images', (req, res) => {
         }
     );
 });
+
+
 
 
 

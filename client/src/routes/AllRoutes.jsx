@@ -8,6 +8,7 @@ import Jewelry from '../pages/Jewelry'
 import About from '../pages/About'
 import OurUsers from '../pages/OurUsers'
 import { Toaster } from 'react-hot-toast'
+import Login from '../pages/Login'
 
 const AllRoutes = () => {
     return (
@@ -20,6 +21,7 @@ const AllRoutes = () => {
                 <Route path="/jewelry" element={<Jewelry />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/users" element={<OurUsers />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
             <Toaster position="top-center" />
         </div>

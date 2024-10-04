@@ -1,12 +1,13 @@
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import AllRoutes from './routes/AllRoutes';
 import Login from './pages/Login';
-
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 function App() {
   const { theme } = useSelector((state) => state.themeReducer);
 
@@ -15,112 +16,74 @@ function App() {
       <Navbar />
       <AllRoutes />
       <Footer />
-      {/* <Login /> */}
     </div>
   )
 }
 
+// Register the ScrollTrigger plugin
+// gsap.registerPlugin(ScrollTrigger);
+// const ScrollAnimation = () => {
+//   const sectionsRef = useRef([]);
 
-
-// hand filter
-// function HandFilter() {
-//   const [skinTone, setSkinTone] = useState(50); // Default value of the slider
-
-//   // Update skin tone based on the slider value
-//   const handleChange = (event) => {
-//     setSkinTone(event.target.value);
-//   };
+//   useEffect(() => {
+//     sectionsRef.current.forEach((section, index) => {
+//       gsap.fromTo(
+//         section,
+//         {
+//           opacity: 0,
+//           y: 100,           // Start off-screen from below
+//           rotation: 10,     // Slight rotation for a "sexy" effect
+//           scale: 0.8,       // Start with a smaller size
+//         },
+//         {
+//           opacity: 1,
+//           y: 0,
+//           rotation: 0,
+//           scale: 1,         // Full size on scroll
+//           duration: 1.5,
+//           ease: 'power3.out',
+//           scrollTrigger: {
+//             trigger: section,
+//             start: 'top 75%', // When the top of the section reaches 75% of the viewport
+//             toggleActions: 'play none none reverse', // Play when scrolled into view, reverse when scrolled out
+//           },
+//         }
+//       );
+//     });
+//   }, []);
 
 //   return (
-//     <div className="app-container">
-//       <div className="hand-container">
-//         <img
-//           src="src\assets\images\hand.png"
-//           alt="Hand with Ring"
-//           className="hand-image"
-//           style={{
-//             filter: `brightness(${skinTone}%)`
-//           }}
-//         />
-//       </div>
-
-//       <div className="slider-container">
-//         <input
-//           type="range"
-//           min="30" // Minimum brightness value for darker tone
-//           max="100" // Maximum brightness value for lighter tone
-//           value={skinTone}
-//           onChange={handleChange}
-//           className="slider"
-//         />
-//         <p>Adjust Hand Skin Tone</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// Sample product images for different colors
-// const productImages = {
-//   red: 'https://image.brilliantearth.com/media/diamond_ring_vto/TD/BE1D3939_yellow_Round_top_50_carat.png',
-//   blue: 'https://image.brilliantearth.com/media/diamond_ring_vto/C7/BE1D3939_rose_Round_top_2_carat.png',
-//   green: 'https://image.brilliantearth.com/media/diamond_ring_vto/3P/BE1D3939_white_Round_top_2_carat.png',
-// };
-
-// const ProductViewer = () => {
-//   const [selectedColor, setSelectedColor] = useState('red'); // Default color
-
-//   const handleColorChange = (color) => {
-//     setSelectedColor(color);
-//   };
-
-//   return (
-//     <div className="product-viewer">
-//       <h1>Product Name</h1>
-
-//       {/* Product Image */}
-//       <img
-//         src={productImages[selectedColor]}
-//         alt={`Product in ${selectedColor}`}
-//         className="product-image"
-//       />
-
-//       {/* Color Selection */}
-//       <div className="color-options">
-//         {Object.keys(productImages).map((color) => (
-//           <button
-//             key={color}
-//             onClick={() => handleColorChange(color)}
-//             style={{
-//               backgroundColor: color,
-//               border: selectedColor === color ? '2px solid black' : 'none',
-//             }}
-//             className="color-button"
-//           >
-//             {color.charAt(0).toUpperCase() + color.slice(1)}
-//           </button>
-//         ))}
-//       </div>
-
-//       <style jsx>{`
-//         .product-image {
-//           width: 300px; /* Adjust as needed */
-//           height: auto;
-//         }
-//         .color-options {
-//           margin-top: 20px;
-//         }
-//         .color-button {
-//           margin-right: 10px;
-//           padding: 10px;
-//           border: none;
-//           cursor: pointer;
-//           color: white;
-//         }
-//       `}</style>
+//     <div style={styles.pageContainer}>
+//       {[...Array(5)].map((_, index) => (
+//         <section
+//           key={index}
+//           ref={el => sectionsRef.current[index] = el}
+//           style={{ ...styles.section, background: index % 2 === 0 ? '#e74c3c' : '#3498db' }}
+//         >
+//           <h1>Section {index + 1}</h1>
+//         </section>
+//       ))}
 //     </div>
 //   );
 // };
 
+// Styling
+// const styles = {
+//   pageContainer: {
+//     width: '100%',
+//     height: '100%',
+//     overflowX: 'hidden',
+//   },
+//   section: {
+//     height: '100vh', // Full-screen height for each section
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     fontSize: '3rem',
+//     color: 'white',
+//     fontWeight: 'bold',
+//   }
+// };
 
 
 export default App
