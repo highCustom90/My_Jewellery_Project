@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
+import Loader from '../pages/Loader';
 
 // Engagement Image Changer Component
 const EngagementImageChanger = () => {
@@ -17,12 +18,15 @@ const EngagementImageChanger = () => {
             try {
                 const res = await axios.get('http://localhost:4500/api/images');
                 const imageIds = res.data;
-                const cloudinaryUrls = imageIds.map(({ public_id, format }) => {
-                    return `https://res.cloudinary.com/dedhgrb2a/image/upload/${public_id}.${format}`
+                const cloudinaryUrls = imageIds.map(({ public_id, format, display_name }) => {
+                    return {
+                        url: `https://res.cloudinary.com/dedhgrb2a/image/upload/${public_id}.${format}`,
+                        display_name
+                    }
                 }
                 );
-
                 setImages(cloudinaryUrls);
+                setLoading(false);
             } catch {
                 setError('Error fetching images');
             } finally {
@@ -32,14 +36,14 @@ const EngagementImageChanger = () => {
         fetchImages();
     }, []);
 
-    return (
+    return loading ? <Loader /> : (
         <Stack direction="row" flexWrap="wrap" justifyContent="space-between" alignItems="center" className='mt-14 sm:justify-center'>
-            {images.map((url, index) => (
+            {images.map(({ url, display_name }, index) => (
                 <Box key={index} width="290px" height="376px" className="mb-8 text-center m-auto">
-                    <Link to="/singleprdetail">
+                    <Link to={`/singleprdetail/${display_name}`}>
                         <img src={url} alt={"text"} className='h-full w-full object-cover object-center' />
-                        {/* <Typography>{"text"}</Typography> */}
                     </Link>
+                    <Typography>{display_name}</Typography>
                 </Box>
             ))}
         </Stack>
