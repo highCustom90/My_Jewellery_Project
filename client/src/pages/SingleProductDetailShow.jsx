@@ -7,13 +7,14 @@ import StarIcon from '@mui/icons-material/Star';
 import { Avatar, Box, Button, Slider, Stack, Typography } from '@mui/material';
 import Modal from '@mui/material/Modal';
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
 import { Slider1 } from '../sliders/Slider1';
 import { caratImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
+import { useParams } from 'react-router-dom';
 
 const SingleProductDetailShow = () => {
-  
+
   function preventHorizontalKeyboardNavigation(event) {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
@@ -24,13 +25,35 @@ const SingleProductDetailShow = () => {
   const [skinTone, setSkinTone] = useState(100); // Default value of the slider
 
   const handleChange = (event, newValue) => {
+
     if (typeof newValue === 'number') {
       setValue(event.target.value);
     }
   };
 
+  const [marquise, setMarquise] = useState([]);
+  const [diamondSize, setDiamondSize] = useState([]);
 
+  // my tp work
+  const { shape } = useParams()
 
+  async function fetchFromDb(value, sizeValue) {
+    let data = await axios.get("http://localhost:5050/rings");
+    const shapes = data.data;
+    if (shapes[shape]) {
+    }
+    setMarquise(shapes.marquise.gold);
+    setDiamondSize(shapes.marquise.Goldsizes)
+    for (let i in shapes.marquise) {
+      if (value === i) {
+        setMarquise(shapes.marquise[value]);
+        setDiamondSize(shapes?.marquise[sizeValue]);
+      }
+    }
+  }
+  useEffect(() => {
+    fetchFromDb();
+  }, [])
 
   return (
     <>
@@ -38,11 +61,11 @@ const SingleProductDetailShow = () => {
         <div className='lg:w-[100%]'>
           <div className='flex lg:w-[100%] flex-wrap lg:justify-between sm:justify-around items-center'>
             {/* here we use multipleProdcutImage array */}
-            {multipleProductImage.map((url, index) => (
+            {marquise.map((url, index) => (
               <Box className="mb-5 lg:w-[350px] lg:h-[350px] sm:w-[150px] sm:h-[150px]" key={index}>
                 <img
                   className='h-full w-full relative'
-                  src={index == 0 ? caratImage[value] : url.realring}
+                  src={index == 0 ? diamondSize[Math.round(value * 2)] : url}
                   alt="something went wrong"
                   style={index === 3 ? { filter: `brightness(${skinTone}%)` } : {}}
                 />
@@ -65,7 +88,7 @@ const SingleProductDetailShow = () => {
                       onKeyDown={preventHorizontalKeyboardNavigation}
                     />
                     <img
-                      src={multipleProductImage[value].handring}
+                      src={multipleProductImage[index].handring}
                       alt="something went wrong"
                       className='absolute bottom-36 left-26'
                       height={"373px"}
@@ -104,13 +127,13 @@ const SingleProductDetailShow = () => {
             <div>
               <Typography><b>Metal</b>: color name</Typography>
               <Stack direction={"row"} justifyContent={"space-around"} className='lg:w-[30%] mt-2'>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden">
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-rose-200" onClick={() => fetchFromDb("rose", "Rosesizes")}>
                   <img src="src\assets\diamondcolor\Rose_Gold.png" className='h-full w-full' alt="" />
                 </Box>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden">
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-slate-400" onClick={() => fetchFromDb("white", "whitesizes")}>
                   <img src="src\assets\diamondcolor\White_Gold.png" className='h-full w-full' alt="" />
                 </Box>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden">
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-orange-300" onClick={() => fetchFromDb("gold", "Goldsizes")}>
                   <img src="src\assets\diamondcolor\Yellow_Gold.png" className='h-full w-full' alt="" />
                 </Box>
               </Stack>
@@ -137,12 +160,13 @@ const SingleProductDetailShow = () => {
                 <Slider
                   value={value}
                   min={0}
-                  step={1}
+                  step={0.50}
                   max={3}
                   className='w-[50%]'
                   onChange={handleChange}
                   valueLabelDisplay="auto"
                   aria-labelledby="non-linear-slider"
+                // valueLabelFormat={(x) => x.toFixed(2)}
                 />
                 <Typography>Select Carat: Carat {value}</Typography>
               </Box>

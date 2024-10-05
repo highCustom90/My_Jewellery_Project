@@ -104,10 +104,6 @@ const multipleProductImage = [
         handring: "https://image.brilliantearth.com/media/diamond_ring_vto/NF/BE1343_yellow_Round_hand_zo_5_carat.png",
         realring: "src/assets/images/hand.png",
     },
-    // "https://image.brilliantearth.com/media/carat_image/39/BE1D032_PR_200ct_white_side2.jpg",
-    // "https://image.brilliantearth.com/media/product_images/TR/BE1D032_white_additional1_1.jpg",
-    // "https://css.brilliantearth.com/static/img/handskin/female_hand_visualizer_zo_light_updated.jpg"
-    // "https://image.brilliantearth.com/cdn-cgi/image/width=500,format=auto/https://image.brilliantearth.com/media/carat_image/F7/BE1D717_OV_75ct_white_side1.jpg?new=1"
 ];
 
 const diamondShapeImage = [
@@ -179,10 +175,12 @@ const recentlyViewedImage = [
 
 
 const caratImage = [
-    "src/assets/0.50_CT/ci0_5carat.png",
-    "src/assets/1_CT/ci1carat.webp",
-    "src/assets/1.50_CT/ci1_5carat.png",
-    "src/assets/2_CT/ci2carat.webp",
+    "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045832/BE1D54_rose_Round_top_50_carat_nm5nsa.png",
+    "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045705/BE1D54_rose_Round_top_1_carat_n2g9is.webp",
+    "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045734/BE1D54_rose_Round_top_150_carat_s4oehf.webp",
+    "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045764/BE1D54_rose_Round_top_2_carat_apv6cs.webp",
+    "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045794/BE1D54_rose_Round_top_250_carat_cvqpev.png",
+    "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045824/BE1D54_rose_Round_top_3_carat_qnuwjf.webp"
     // "https://image.brilliantearth.com/media/diamond_ring_vto/8E/BE1D3939_yellow_Round_top_250_carat.png",
     // "https://image.brilliantearth.com/media/diamond_ring_vto/58/BE1D3939_yellow_Round_top_5_carat.png" 
 ]
@@ -388,5 +386,5 @@ const EngagemenExploreImages = [
 export {
     multipleProductImage, diamondShapeImage, otherEngagementRingImage, recentlyViewedImage, caratImage, shopBySlide, popularWeddingRingImage, signatureExplore, ringEducation, missionPillar,
     EngagemenExploreImages,
-    Engagement1SliderImage,sec1Image,HomePageSlider,diamondTypeImage
+    Engagement1SliderImage, sec1Image, HomePageSlider, diamondTypeImage
 }

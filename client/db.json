@@ -1,5 +1,101 @@
 {
-    "rings": [],
+    "rings": {
+        "round": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "princess": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "cushion": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "oval": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "emerald": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "asscher": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "marquise": {
+            "rose": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045831/BE1D54_rose_Asscher_top_50_carat_kfuqd7.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045829/BE1D54_AS_50ct_rose_side1_xgnnns.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045654/BE1D54_AS_50ct_rose_side2_yhmzpd.webp"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045832/BE1D54_white_Asscher_top_50_carat_ujn1yw.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045654/BE1D54_AS_50ct_white_side1_gqj9cd.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045654/BE1D54_AS_50ct_white_side2_zdlzev.webp"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045831/BE1D54_yellow_Asscher_top_50_carat_f6u3ai.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045655/BE1D54_AS_50ct_yellow_side2_focbkx.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045654/BE1D54_AS_50ct_yellow_side1_audpkt.webp",""
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045832/BE1D54_rose_Round_top_50_carat_nm5nsa.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045705/BE1D54_rose_Round_top_1_carat_n2g9is.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045734/BE1D54_rose_Round_top_150_carat_s4oehf.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045764/BE1D54_rose_Round_top_2_carat_apv6cs.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045794/BE1D54_rose_Round_top_250_carat_cvqpev.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045824/BE1D54_rose_Round_top_3_carat_qnuwjf.webp"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045834/BE1D54_yellow_Round_top_50_carat_ugd59e.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045707/BE1D54_yellow_Round_top_1_carat_s6gcot.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045736/BE1D54_yellow_Round_top_150_carat_rml7ox.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045766/BE1D54_yellow_Round_top_2_carat_s1q1zn.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045796/BE1D54_yellow_Round_top_250_carat_qczcex.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045826/BE1D54_yellow_Round_top_3_carat_cwwtte.png"
+            ],
+            "whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045676/BE1D54_white_Round_top_50_carat_mwq1mk.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045706/BE1D54_white_Round_top_1_carat_lix1wa.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045736/BE1D54_white_Round_top_150_carat_jk7auk.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045765/BE1D54_white_Round_top_2_carat_riqmg1.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045795/BE1D54_white_Round_top_250_carat_ezxte5.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045826/BE1D54_white_Round_top_3_carat_a9u8se.png"
+            ]
+        },
+        "radiant": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "pear": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        },
+        "heart": {
+            "rose": [],
+            "white": [],
+            "gold": [],
+            "sizes": []
+        }
+    },
     "bracelets": [
         {
             "id": 1,
