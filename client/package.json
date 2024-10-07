@@ -19,9 +19,12 @@
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
     "@mui/styled-engine-sc": "^6.1.1",
+    "@react-three/drei": "^9.114.2",
+    "@react-three/fiber": "^8.17.9",
     "6pp": "^1.2.16",
     "axios": "^1.7.7",
     "cloudinary": "^2.5.0",
+    "esbuild": "^0.24.0",
     "faker": "^5.5.3",
     "formik": "^2.4.6",
     "framer-motion": "^11.9.0",
@@ -40,6 +43,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13",
     "swiper": "^11.1.14",
+    "three": "^0.169.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

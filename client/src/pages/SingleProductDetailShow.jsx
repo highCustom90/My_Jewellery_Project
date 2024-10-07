@@ -20,16 +20,32 @@ const SingleProductDetailShow = () => {
       event.preventDefault();
     }
   }
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState({ value: 0, size: 0.5 });
 
   const [skinTone, setSkinTone] = useState(100); // Default value of the slider
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event, sec) => {
+    console.log(event.target.value)
+    const newValue = parseFloat(event.target.value); // Get the new slider value
 
-    if (typeof newValue === 'number') {
-      setValue(event.target.value);
-    }
+    setValue((prevState) => {
+      if (newValue > prevState.value) {
+        // If the new value is greater than the previous value, increment both `value` and `size`
+        return {
+          value: prevState.value + 1,
+          size: prevState.size + 0.5,
+        };
+      } else if (newValue < prevState.value) {
+        // If the new value is smaller than the previous value, decrement both `value` and `size`
+        return {
+          value: prevState.value - 1,
+          size: prevState.size - 0.5,
+        };
+      }
+      return prevState; // No change if values are equal
+    });
   };
+
 
   const [marquise, setMarquise] = useState([]);
   const [diamondSize, setDiamondSize] = useState([]);
@@ -41,13 +57,13 @@ const SingleProductDetailShow = () => {
     let data = await axios.get("http://localhost:5050/rings");
     const shapes = data.data;
     if (shapes[shape]) {
-    }
-    setMarquise(shapes.marquise.gold);
-    setDiamondSize(shapes.marquise.Goldsizes)
-    for (let i in shapes.marquise) {
-      if (value === i) {
-        setMarquise(shapes.marquise[value]);
-        setDiamondSize(shapes?.marquise[sizeValue]);
+      setMarquise(shapes[shape].gold);
+      setDiamondSize(shapes[shape].Goldsizes)
+      for (let i in shapes[shape]) {
+        if (value === i) {
+          setMarquise(shapes[shape][value]);
+          setDiamondSize(shapes[shape][sizeValue]);
+        }
       }
     }
   }
@@ -65,10 +81,11 @@ const SingleProductDetailShow = () => {
               <Box className="mb-5 lg:w-[350px] lg:h-[350px] sm:w-[150px] sm:h-[150px]" key={index}>
                 <img
                   className='h-full w-full relative'
-                  src={index == 0 ? diamondSize[Math.round(value * 2)] : url}
+                  src={index == 0 ? diamondSize[value.value] : url}
                   alt="something went wrong"
                   style={index === 3 ? { filter: `brightness(${skinTone}%)` } : {}}
                 />
+
                 {index === 3 &&
                   <Box sx={{ height: "150px" }} className="relative">
                     <Slider
@@ -130,7 +147,7 @@ const SingleProductDetailShow = () => {
                 <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-rose-200" onClick={() => fetchFromDb("rose", "Rosesizes")}>
                   <img src="src\assets\diamondcolor\Rose_Gold.png" className='h-full w-full' alt="" />
                 </Box>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-slate-400" onClick={() => fetchFromDb("white", "whitesizes")}>
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-slate-400" onClick={() => fetchFromDb("white", "Whitesizes")}>
                   <img src="src\assets\diamondcolor\White_Gold.png" className='h-full w-full' alt="" />
                 </Box>
                 <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-orange-300" onClick={() => fetchFromDb("gold", "Goldsizes")}>
@@ -158,8 +175,8 @@ const SingleProductDetailShow = () => {
               </Stack>
               <Box sx={{ width: "200px" }} className="sm:m-auto lg:m-0">
                 <Slider
-                  value={value}
-                  min={0}
+                  value={value.size}
+                  min={0.50}
                   step={0.50}
                   max={3}
                   className='w-[50%]'
@@ -168,7 +185,7 @@ const SingleProductDetailShow = () => {
                   aria-labelledby="non-linear-slider"
                 // valueLabelFormat={(x) => x.toFixed(2)}
                 />
-                <Typography>Select Carat: Carat {value}</Typography>
+                <Typography>Select Carat: Carat {value.size}</Typography>
               </Box>
             </div>
 
