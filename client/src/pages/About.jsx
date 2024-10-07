@@ -4,6 +4,56 @@ import React from 'react';
 import { missionPillar } from '../utils/AllImagesProvider';
 
 
+const AboutNav = [
+    "About",
+    "Mission",
+    "Transparency",
+    "Sustainability",
+    "Compassion",
+    "Inclusion"
+]
+
+const lastDiv = [
+    {
+        word1: "Free Shipping Both Ways",
+        word2: "Learn More"
+    },
+    {
+        word1: "Free 30-Day Returns & Exchanges",
+        word2: "Learn More"
+    },
+    {
+        word1: "24/7 Customer Support",
+        word2: "Learn More"
+    },
+    {
+        word1: "Free 60-Day Resizes",
+        word2: "Learn More"
+    },
+    {
+        word1: "Free Diamond Upgrades",
+        word2: "Learn More"
+    },
+]
+
+const last3rdDiv = [
+    {
+        word1: "Recycled Metals",
+        word2: "Today, 96% of our gold and 97% of our silver is recycled. By 2025, 100% will be recycled or Fairmined."
+    },
+    {
+        word1: "Circularity",
+        word2: "Recycled materials. Timeless designs. Lifetime warranties. And trade-in programs that give your jewelry new life."
+    },
+    {
+        word1: "Zero Waste",
+        word2: "No single-use plastics by 2025. Zero waste in showrooms and offices by 2030."
+    },
+    {
+        word1: "Emission reductions",
+        word2: "We have committed to setting near-term company-wide emission reductions."
+    },
+]
 
 const About = () => {
 
@@ -15,12 +65,9 @@ const About = () => {
 
             <div className='bg-custom-green text-white'>
                 <Stack className='justify-around lg:w-[80%] m-auto pt-[16px] pb-[16px] sm:flex-col lg:flex-row sm:items-center'>
-                    <Typography>About</Typography>
-                    <Typography>Mission</Typography>
-                    <Typography>Transparency</Typography>
-                    <Typography>Sustainability</Typography>
-                    <Typography>Compassion</Typography>
-                    <Typography>Inclusion</Typography>
+                    {AboutNav.map((el, index) => (
+                        <Typography key={index}>{el}</Typography>
+                    ))}
                 </Stack>
             </div>
 
@@ -85,28 +132,17 @@ const About = () => {
                         </Typography>
                     </div>
                     <Stack direction={"row"} className='justify-between items-center flex-wrap sm:justify-center sm:text-center lg:text-left'>
-                        <Box className="lg:h-[157px] me-3 w-[250px] mb-5">
-                            <Typography variant='h5' className='lg:h-[60px]'>Recycled Metals</Typography>
-                            <Typography>Today, 96% of our gold and 97% <br /> of our silver is recycled. By 2025, <br /> 100% will be recycled or <br /> Fairmined.</Typography>
-                        </Box>
-                        <Box className="lg:h-[157px] me-3 w-[250px] mb-5">
-                            <Typography variant='h5' className='lg:h-[60px]'>Circularity</Typography>
-                            <Typography>
-                                Recycled materials. Timeless <br /> designs. Lifetime warranties. And <br /> trade-in programs that give your <br /> jewelry new life.
-                            </Typography>
-                        </Box>
-                        <Box className="lg:h-[157px] me-3 w-[250px] mb-5">
-                            <Typography variant='h5' className='lg:h-[60px]'>Zero Waste</Typography>
-                            <Typography>No single-use plastics by 2025. <br /> Zero waste in showrooms and <br /> offices by 2030.</Typography>
-                        </Box>
-                        <Box className="lg:h-[157px] me-3 w-[250px] mb-5">
-                            <Typography variant='h5' className='lg:h-[60px]'>Emission reductions</Typography>
-                            <Typography>We have committed to setting <br /> near-term company-wide emission <br /> reductions.</Typography>
-                        </Box>
+                        {last3rdDiv.map(({ word1, word2 }, index) => (
+                            <Box className="lg:h-[157px] me-3 w-[250px] mb-5" key={index}>
+                                <Typography variant='h5' className='lg:h-[60px]'>{word1}</Typography>
+                                <Typography>{word2}</Typography>
+                            </Box>
+                        ))}
                     </Stack>
                 </Box>
             </Stack>
 
+            {/* here use map for reduce our code */}
             <div className='bg-[#c2a1a5] lg:h-[1293px] sm:text-center lg:text-left'>
                 <Typography className='text-center pt-[80px] pb-5' variant='h5'>The Brilliant Earth Difference</Typography>
                 <Stack className='lg:w-[80%] m-auto flex-wrap justify-center items-center' direction={"row"}>
@@ -137,31 +173,18 @@ const About = () => {
             <div className='lg:h-[270px] bg-[#4c8380] text-white sm:text-center lg:text-left'>
                 <Box className="lg:h-[110px] lg:w-[80%] m-auto pt-[80px]">
                     <Stack direction={"row"} className='justify-around items-center flex-wrap'>
-                        <Box className="w-[209px] h-[110px]">
-                            <Typography fontSize={"16px"} mb={"20px"}>Free Shipping Both Ways</Typography>
-                            <Typography className='underline'>Learn More</Typography>
-                        </Box>
-                        <Box className="w-[209px] h-[110px]">
-                            <Typography fontSize={"16px"} mb={"20px"}>Free 30-Day Returns & <br /> Exchanges</Typography>
-                            <Typography className='underline'>Learn More</Typography>
-                        </Box>
-                        <Box className="w-[209px] h-[110px]">
-                            <Typography fontSize={"16px"} mb={"20px"}>24/7 Customer Support</Typography>
-                            <Typography className='underline'>Learn More</Typography>
-                        </Box>
-                        <Box className="w-[209px] h-[110px]">
-                            <Typography fontSize={"16px"} mb={"20px"}>Free 60-Day Resizes</Typography>
-                            <Typography className='underline'>Learn More</Typography>
-                        </Box>
-                        <Box className="w-[209px] h-[110px]">
-                            <Typography fontSize={"16px"} mb={"20px"}>Free Diamond <br /> Upgrades</Typography>
-                            <Typography className='underline'>Learn More</Typography>
-                        </Box>
+                        {lastDiv.map(({ word1, word2 }, index) => (
+                            <Box className="w-[209px] h-[110px]" key={index}>
+                                <Typography fontSize={"16px"} mb={"20px"}>{word1}</Typography>
+                                <Typography className='underline'>{word2}</Typography>
+                            </Box>
+                        ))}
                     </Stack>
                 </Box>
             </div>
         </div>
     )
 }
+
 
 export default About

@@ -1,86 +1,9 @@
 import { Box, Button, Paper, Stack, Typography } from '@mui/material'
 import React from 'react'
+import { jewelryCatImage, jewelryCollections, meaningJewelry, popularJewelry } from '../utils/AllImagesProvider';
 
 
-const jewelryCatImage = [
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fbe11266ca3b741fcabf53006c94f84ca",
-        text: "Earrings"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fc84d620123794a5c917fb278ce38dbbc",
-        text: "Necklaces"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F401c67828cd242cdab46d72ec64e284b",
-        text: "Braceletes"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F1d543a34b0f24f1b9a820090d2c82873",
-        text: "Rings"
-    },
-]
 
-const popularJewelry = [
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=289,height=335,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F1afcd5c13e884374bb8b0d64d0bd3bb7",
-        text: "Diamond Studs"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=289,height=335,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F1482208c023440d7b78502c85be480c7",
-        text: "Stackable Rings"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=289,height=335,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F8beab8abc68542a8ae3002769d33e582",
-        text: "Tennis Bracelets"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=289,height=335,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F26ebfdd8fd48448c8a4d64bbe558cb27",
-        text: "Gemstone Jewelry"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=289,height=335,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F8bdc741f56da44e7820a2f146deecddc",
-        text: "Men's Jewelry"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=289,height=335,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fe246acb52e9e4a36939437045a6eb2d0",
-        text: "Lab Diamond Jewelry"
-    },
-]
-
-const meaningJewelry = [
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F413d7388d926449c99dd3691046e6614",
-        text: "The Fairmined Gold Collection"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F20d09aa0c34f4eb5b4d6a9e60111b779",
-        text: "Birthstone Jewelry"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F6642aa58d83f48448da7a88aabe986af",
-        text: "Engravable Jewelry"
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F25d48bf6969846ecb25bdbe5c6b078ce",
-        text: "Symbolic and Religious Jewelry"
-    },
-]
-
-const jewelryCollections = [
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F1852b40974324bf4b669d8ab470052a8",
-        text: ["The Sol Collection", "An exclusive capsule of fine jewelry designed to capture your distinctive style and story."]
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F41c5e44bfb5e49f1a89e02942a2b6b77",
-        text: ["The Essentials Edit", "It’s time to refresh your jewelry box with the latest in timeless must-haves."]
-    },
-    {
-        url: "https://image.brilliantearth.com/cdn-cgi/image/width=443,height=513,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2Fd008a2ff99de4082ae32b8715773fab3",
-        text: ["Cocktail Rings", "Live in color with our brightest and boldest designs."]
-    },
-]
 const Jewelry = () => {
     return (
         <div>
