@@ -9,9 +9,13 @@ import Modal from '@mui/material/Modal';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
-import { Slider1 } from '../sliders/Slider1';
-import { caratImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
-import { useParams } from 'react-router-dom';
+import { MediaQueryInMobileViewSlider, Slider1 } from '../sliders/Slider1';
+import { caratImage, diamondTypeImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
+import { useParams, useSearchParams } from 'react-router-dom';
+import Rose_Gold from '../assets/diamondcolor/Rose_Gold.png'
+import White_Gold from '../assets/diamondcolor/White_Gold.png'
+import Yellow_Gold from '../assets/diamondcolor/Yellow_Gold.png'
+import { MobileAccordianView } from '../utils/HelperFunctions';
 
 const SingleProductDetailShow = () => {
 
@@ -21,44 +25,47 @@ const SingleProductDetailShow = () => {
     }
   }
   const [value, setValue] = useState({ value: 0, size: 0.5 });
+  const { shape } = useParams();
 
   const [skinTone, setSkinTone] = useState(100); // Default value of the slider
+  const [getShapeNameWhenClick, setShapeNameWhenClick] = useState(shape);
 
   const handleChange = (event, sec) => {
-    console.log(event.target.value)
-    const newValue = parseFloat(event.target.value); // Get the new slider value
 
-    setValue((prevState) => {
-      if (newValue > prevState.value) {
-        // If the new value is greater than the previous value, increment both `value` and `size`
-        return {
-          value: prevState.value + 1,
-          size: prevState.size + 0.5,
-        };
-      } else if (newValue < prevState.value) {
-        // If the new value is smaller than the previous value, decrement both `value` and `size`
-        return {
-          value: prevState.value - 1,
-          size: prevState.size - 0.5,
-        };
-      }
-      return prevState; // No change if values are equal
-    });
+    const newValue = (event.target.value); // Get the new slider value
+    console.log(newValue, value.value)
+    if (newValue)
+      setValue(prev => {
+        if (newValue > prev.size) {
+          return {
+            value: prev.value + 1,
+            size: prev.size + 0.50,
+          }
+        } else if (newValue < prev.size) {
+          return {
+            value: prev.value - 1,
+            size: prev.size - 0.50,
+          }
+        } else {
+          return prev;
+        }
+      })
+
   };
 
 
   const [marquise, setMarquise] = useState([]);
   const [diamondSize, setDiamondSize] = useState([]);
 
-  // my tp work
-  const { shape } = useParams()
+  // my imp work
+  const [Param, setParam] = useSearchParams();
 
   async function fetchFromDb(value, sizeValue) {
     let data = await axios.get("http://localhost:5050/rings");
     const shapes = data.data;
     if (shapes[shape]) {
       setMarquise(shapes[shape].gold);
-      setDiamondSize(shapes[shape].Goldsizes)
+      setDiamondSize(shapes[shape].Goldsizes);
       for (let i in shapes[shape]) {
         if (value === i) {
           setMarquise(shapes[shape][value]);
@@ -66,6 +73,11 @@ const SingleProductDetailShow = () => {
         }
       }
     }
+  }
+  function ShapeNameWhenClick(index) {
+    setParam({ shape: diamondTypeImage[index].text })
+    setShapeNameWhenClick(diamondTypeImage[index].text)
+    // tommorrow work fetch with shape when user click andy shape here work is pending
   }
   useEffect(() => {
     fetchFromDb();
@@ -75,7 +87,7 @@ const SingleProductDetailShow = () => {
     <>
       <div className='flex lg:w-[80%] mdi:w-[80%] m-auto sm:flex-col lg:flex-row overflow-hidden'>
         <div className='lg:w-[100%]'>
-          <div className='flex lg:w-[100%] flex-wrap lg:justify-between sm:justify-around items-center'>
+          <div className='lg:flex sm:hidden lg:w-[100%] flex-wrap lg:justify-between sm:justify-around items-center'>
             {/* here we use multipleProdcutImage array */}
             {marquise.map((url, index) => (
               <Box className="mb-5 lg:w-[350px] lg:h-[350px] sm:w-[150px] sm:h-[150px]" key={index}>
@@ -91,7 +103,7 @@ const SingleProductDetailShow = () => {
                     <Slider
                       sx={{
                         '& .MuiSlider-thumb': {
-                          color: 'primary.main', // Customize thumb color
+                          color: 'primary.main', // Customize thumb color0
                         },
                       }}
                       className='absolute left-80 bottom-60 z-50'
@@ -105,7 +117,7 @@ const SingleProductDetailShow = () => {
                       onKeyDown={preventHorizontalKeyboardNavigation}
                     />
                     <img
-                      src={multipleProductImage[index].handring}
+                      src={multipleProductImage[value.value]}
                       alt="something went wrong"
                       className='absolute bottom-36 left-26'
                       height={"373px"}
@@ -116,6 +128,9 @@ const SingleProductDetailShow = () => {
               </Box>
             ))}
           </div>
+
+          {/* this is slider when user in mobile */}
+          <MediaQueryInMobileViewSlider data={marquise} value={value} diamondSize={diamondSize} />
         </div>
 
         <div className='lg:w-[100%]'>
@@ -130,28 +145,37 @@ const SingleProductDetailShow = () => {
 
             </Stack>
 
-            <Typography className='text-gray-500'>
+            <Typography className='text-gray-500 sm:hidden lg:block'>
               Elegant and chic, this three stone ring features two kite- <br /> shaped diamond accents alongside a center gemstone <br /> cradled by lustrous claw prongs. The sleek, sophisticated <br /> band gently tapers down into a low dome for increased <br /> comfort.
             </Typography>
 
+            {/* this is pr detail but when show when user in mobile view */}
+            <MobileAccordianView />
+
             {/* here we provide slider for diamond shape */}
             <div className='mt-5'>
-              <span>View The Diamond Shape: Any name</span>
-              <Typography>here we provide slider for diamond shape</Typography>
+              <span>View The Diamond Shape:{getShapeNameWhenClick}</span>
+              <Stack direction={"row"}>
+                {Array.from({ length: 10 }).map((_, index) => (
+                  <Box className="h-[40px] w-[40px]  cursor-pointer" key={index} onClick={() => ShapeNameWhenClick(index)}>
+                    <img src={diamondTypeImage[index].url} className='h-full w-full' alt="something went wrong" />
+                  </Box>
+                ))}
+              </Stack>
             </div>
 
             {/* here diamond shape color */}
-            <div>
+            <div className='mt-5'>
               <Typography><b>Metal</b>: color name</Typography>
               <Stack direction={"row"} justifyContent={"space-around"} className='lg:w-[30%] mt-2'>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-rose-200" onClick={() => fetchFromDb("rose", "Rosesizes")}>
-                  <img src="src\assets\diamondcolor\Rose_Gold.png" className='h-full w-full' alt="" />
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden" onClick={() => fetchFromDb("rose", "Rosesizes")}>
+                  <img src={Rose_Gold} className='h-full w-full' alt="" />
                 </Box>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-slate-400" onClick={() => fetchFromDb("white", "Whitesizes")}>
-                  <img src="src\assets\diamondcolor\White_Gold.png" className='h-full w-full' alt="" />
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden" onClick={() => fetchFromDb("white", "Whitesizes")}>
+                  <img src={White_Gold} className='h-full w-full' alt="" />
                 </Box>
-                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden bg-orange-300" onClick={() => fetchFromDb("gold", "Goldsizes")}>
-                  <img src="src\assets\diamondcolor\Yellow_Gold.png" className='h-full w-full' alt="" />
+                <Box height={"30px"} width={"30px"} className="rounded-full cursor-pointer overflow-hidden" onClick={() => fetchFromDb("gold", "Goldsizes")}>
+                  <img src={Yellow_Gold} className='h-full w-full' alt="" />
                 </Box>
               </Stack>
             </div>
@@ -170,12 +194,11 @@ const SingleProductDetailShow = () => {
               <Typography>Diamond Origin: Natural</Typography>
               <Stack direction={"row"} justifyContent={"space-around"} alignItems={"center"} className='lg:w-[50%] mt-2 text-center mb-4'>
                 <button className='rounded-full border border-custom-green ps-3 pe-3 pt-2 pb-1'>Mossioniate</button>
-                {/* <button className='rounded-full border border-custom-green ps-3 pe-3 pt-2 pb-1'>Nature</button> */}
                 <button className='rounded-full border border-custom-green ps-3 pe-3 pt-2 pb-1'>Lab Grown</button>
               </Stack>
               <Box sx={{ width: "200px" }} className="sm:m-auto lg:m-0">
                 <Slider
-                  value={value.size}
+                  // value={value.size}
                   min={0.50}
                   step={0.50}
                   max={3}
