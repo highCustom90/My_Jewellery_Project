@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
+import { Slider, Typography } from '@mui/material';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/effect-cube';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination, EffectCube, Grid } from 'swiper/modules';
-import { Typography } from '@mui/material';
-
-
+import { EffectCube, FreeMode, Grid, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { multipleProductImage } from '../utils/AllImagesProvider';
 
 const Slider1 = ({ data }) => {
     return (
@@ -128,17 +128,58 @@ const DiamondShapeSlider = () => {
             modules={[Pagination]}
             className="mySwiper border border-red-600"
         >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
         </Swiper>
     )
 
 }
-export { Slider1, BoxSlider, Engagement1Slider, DiamondShapeSlider };
+
+// media quer slider when in mobile view of singleprdetails
+const MediaQueryInMobileViewSlider = ({ data, value, diamondSize }) => {
+    const [skinTone, setSkinTone] = useState(100)
+    return (
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper lg:hidden sm:block">
+            {data.map((url, index) => (
+                <SwiperSlide key={index}>
+                    <img src={index === 0 ? diamondSize[value.value] : url} alt={url} className='w-[370px] h-[370px] object-contain object-center block m-auto' style={index === 3 ? { filter: `brightness(${skinTone}%)` } : {}} />
+                    {index === 3 &&
+                        <div className='w-[30%]'>
+                            <Slider
+                                sx={{
+                                    '& .MuiSlider-thumb': {
+                                        color: 'primary.main', // Customize thumb color0
+                                    },
+                                }}
+                                className='absolute left-36 bottom-2 z-50'
+                                orientation="horizontal"
+                                value={skinTone}
+                                onChange={(e) => setSkinTone(e.target.value)}
+                                aria-label="Skin Tone"
+                                min={45}
+                                max={100}
+                                valueLabelDisplay="auto"
+                            // onKeyDown={preventHorizontalKeyboardNavigation}
+                            />
+                            <img
+                                src={multipleProductImage[5]}
+                                alt="something went wrong"
+                                className='absolute bottom-14 left-3'
+                                height={"373px"}
+                                width={"373px"}
+                            />
+                        </div>
+                    }
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    )
+}
+export { BoxSlider, DiamondShapeSlider, Engagement1Slider, MediaQueryInMobileViewSlider, Slider1 };

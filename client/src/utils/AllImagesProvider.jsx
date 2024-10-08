@@ -88,22 +88,13 @@ const diamondTypeImage = [
 
 // here all singleproduct images
 const multipleProductImage = [
-    {
-        handring: "https://image.brilliantearth.com/media/diamond_ring_vto/5E/BE1D6912_rose_Cushion_hand_zo_33_carat.png",
-        realring: "https://image.brilliantearth.com/media/carat_image/1A/BE1D032_OV_200ct_yellow_side1.jpg",
-    },
-    {
-        handring: "https://image.brilliantearth.com/media/diamond_ring_vto/QA/BE1D6912_rose_Cushion_hand_zo_75_carat.png",
-        realring: "https://image.brilliantearth.com/media/product_images/0Z/BE1D032-white_2.jpg",
-    },
-    {
-        handring: "https://image.brilliantearth.com/media/diamond_ring_vto/SZ/BE1D6912_rose_Cushion_hand_zo_125_carat.png",
-        realring: "https://image.brilliantearth.com/media/carat_image/F0/BE1D6912_CU_200ct_rose_side1.jpg",
-    },
-    {
-        handring: "https://image.brilliantearth.com/media/diamond_ring_vto/NF/BE1343_yellow_Round_hand_zo_5_carat.png",
-        realring: "src/assets/images/hand.png",
-    },
+    "https://image.brilliantearth.com/media/diamond_ring_vto/5E/BE1D6912_rose_Cushion_hand_zo_33_carat.png",
+    "https://image.brilliantearth.com/media/diamond_ring_vto/OC/BE18959_yellow_Oval_hand_zo_75_carat.png",
+    "https://image.brilliantearth.com/media/diamond_ring_vto/BX/BE18959_yellow_Oval_hand_zo_125_carat.png",
+    "https://image.brilliantearth.com/media/diamond_ring_vto/D6/BE18959_yellow_Oval_hand_zo_2_carat.png",
+    "https://image.brilliantearth.com/media/diamond_ring_vto/8S/BE18959_yellow_Oval_hand_zo_250_carat.png",
+    "https://image.brilliantearth.com/media/diamond_ring_vto/JZ/BE18959_yellow_Oval_hand_zo_3_carat.png",
+
 ];
 
 const diamondShapeImage = [
