@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import Loader from '../pages/Loader';
-
+import toast from 'react-hot-toast';
+import 'react-toastify/dist/ReactToastify.css';
 // Engagement Image Changer Component
 const EngagementImageChanger = () => {
     const [images, setImages] = useState([]);
@@ -136,16 +137,53 @@ const MobileAccordianView = () => {
     )
 }
 
+// here all about login functionality
 
+// Initial Values
+let signInInitialValues = { email: '', password: '' };
+let createAccountInitialValues = { name: '', lastName: '', email: '', password: '', confirmPassword: '' };
 // loginaccount func
-function createAccountFunc(values) {
-    console.log(values, "printed values")
+async function createAccountFunc(values, { resetForm }) {
+    try {
+        const userAccVerify = await axios.post("http://localhost:4500/createacc/user", values);
+        toast.success(userAccVerify.data.message, {
+            hideProgressBar: true, // This enables the progress bar (default is true)
+            closeOnClick: true,     // Close the toast on click
+            autoClose: 1000,        // Close automatically after 1 second (1000 ms)
+            pauseOnHover: false,    // Make sure the toast doesn't pause when hovered (optional)
+            draggable: true,        // Allow the toast to be draggable (optional)
+        });
+    } catch (error) {
+        toast.error(error?.response?.data?.message, {
+            hideProgressBar: false, // This enables the progress bar (default is true)
+            closeOnClick: true,     // Close the toast on click
+            autoClose: 1000,        // Close automatically after 1 second (1000 ms)
+            pauseOnHover: false,    // Make sure the toast doesn't pause when hovered (optional)
+            draggable: true,        // Allow the toast to be draggable (optional)
+        });
+    } finally {
+        resetForm();
+        console.log("hasdfjlk")
+    }
 }
-// singinaccount func
-function signAccountFunc(values) {
-    console.log(values, "printed values")
+// singinaccount func email pass only
+async function signInAccountFunc(values, { resetForm }) {
+    try {
+        const userAccVerify = await axios.post("http://localhost:4500/signin/user", values);
+        toast.success(userAccVerify.data.message, {
+            hideProgressBar: false, // This enables the progress bar (default is true)
+            closeOnClick: true,     // Close the toast on click
+            autoClose: 1000,        // Close automatically after 1 second (1000 ms)
+            pauseOnHover: false,    // Make sure the toast doesn't pause when hovered (optional)
+            draggable: true,        // Allow the toast to be draggable (optional)
+        });
+        localStorage.setItem("token", userAccVerify.data.token);
+        resetForm();
+    } catch (error) {
+        toast.error(error.response.data.message || "Error Signing in");
+        resetForm();
+    }
 }
-
 
 // Validation Schemas
 const signInValidationSchema = Yup.object({
@@ -161,10 +199,8 @@ const createAccountValidationSchema = Yup.object({
     confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match').required('Confirm Password is required'),
 });
 
-// Initial Values
-const signInInitialValues = { email: '', password: '' };
-const createAccountInitialValues = { name: '', lastName: '', email: '', password: '', confirmPassword: '' };
+
 
 // Export
-export { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, EngagementAccordion, EngagementImageChanger, signAccountFunc, signInInitialValues, signInValidationSchema, MobileAccordianView };
+export { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, EngagementAccordion, EngagementImageChanger, signInAccountFunc, signInInitialValues, signInValidationSchema, MobileAccordianView };
 

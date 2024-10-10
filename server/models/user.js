@@ -1,3 +1,6 @@
+
+// this is for drop hint
+
 const mongoose = require("mongoose")
 const mongooseUrl = ("mongodb://localhost:27017/users");
 mongoose.connect(mongooseUrl)
@@ -12,8 +15,7 @@ const userSchema = new mongoose.Schema({
     email: {
         required: true,
         type: String,
-    },
-    cart: []
+    }
 })
 
 const User = mongoose.model("User", userSchema);

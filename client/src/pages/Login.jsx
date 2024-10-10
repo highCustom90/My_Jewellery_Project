@@ -2,10 +2,12 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, signAccountFunc, signInInitialValues, signInValidationSchema } from '../utils/HelperFunctions';
+import { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, signInAccountFunc, signInInitialValues, signInValidationSchema } from '../utils/HelperFunctions';
 import { useFormik } from 'formik';
 
 const Login = () => {
+
+
 
     const [see, setSee] = useState({
         element1: false,
@@ -22,14 +24,14 @@ const Login = () => {
         onSubmit: createAccountFunc
     })
 
-    const signInFormik = useFormik({
+    const signupFormik = useFormik({
         initialValues: signInInitialValues,
         validationSchema: signInValidationSchema,
-        onSubmit: signAccountFunc
+        onSubmit: signInAccountFunc
     });
 
     return (
-        <div className="flex border border-blue-500 items-center h-screen justify-center sm:flex-col lg:flex-row">
+        <div className="flex items-center h-screen justify-center sm:flex-col lg:flex-row">
 
             <div>
                 <div>
@@ -42,7 +44,7 @@ const Login = () => {
                     </Typography>
                 </div>
 
-                <form onSubmit={signInFormik.handleSubmit} className="mt-10 grid grid-cols-1 sm:grid-cols-12 w-[300px] sm:m-auto sm:mt-8">
+                <form onSubmit={signupFormik.handleSubmit} className="mt-10 grid grid-cols-1 sm:grid-cols-12 w-[300px] sm:m-auto sm:mt-8">
                     {/* email field */}
                     <div className="sm:col-span-12 lg:col-span-12">
                         <label htmlFor="email1" className="block text-sm font-medium leading-6 text-gray-900">
@@ -56,11 +58,11 @@ const Login = () => {
                                 autoComplete="given-email"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Enter your email"
-                                defaultValue={signInInitialValues.email}
-                                onChange={signInFormik.handleChange}
-                                onBlur={signInFormik.handleBlur}
+                                value={signupFormik.values.email}
+                                onChange={signupFormik.handleChange}
+                                onBlur={signupFormik.handleBlur}
                             />
-                            {signInFormik.touched.email && signInFormik.errors.email ? <div style={{ color: 'red' }}>{signInFormik.errors.email}</div> : null}
+                            {signupFormik.touched.email && signupFormik.errors.email ? <div style={{ color: 'red' }}>{signupFormik.errors.email}</div> : null}
                         </div>
                     </div>
                     {/* Password Field */}
@@ -76,12 +78,12 @@ const Login = () => {
                                 autoComplete="given-email"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Enter your password"
-                                defaultValue={signInInitialValues.password}
-                                onChange={signInFormik.handleChange}
-                                onBlur={signInFormik.handleBlur}
+                                value={signupFormik.values.password}
+                                onChange={signupFormik.handleChange}
+                                onBlur={signupFormik.handleBlur}
                             />
-                            {see.element1 ? <RemoveRedEyeIcon className='absolute right-3 top-2' onClick={() => handleClick("element1")} /> : <VisibilityOffIcon className='absolute right-3 top-2' onClick={() => handleClick("element1")} />}
-                            {signInFormik.touched.password && signInFormik.errors.password ? <div style={{ color: 'red' }}>{signInFormik.errors.password}</div> : null}
+                            {see.element1 ? <RemoveRedEyeIcon className='absolute cursor-pointer right-3 top-2' onClick={() => handleClick("element1")} /> : <VisibilityOffIcon className='absolute right-3 top-2 cursor-pointer' onClick={() => handleClick("element1")} />}
+                            {signupFormik.touched.password && signupFormik.errors.password ? <div style={{ color: 'red' }}>{signupFormik.errors.password}</div> : null}
                         </div>
                     </div>
 
@@ -119,7 +121,7 @@ const Login = () => {
                                 autoComplete="given-name"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Enter your name"
-                                defaultValue={createAccountInitialValues.name}
+                                value={createAccountFormik.values.name}
                                 onChange={createAccountFormik.handleChange}
                                 onBlur={createAccountFormik.handleBlur}
                             />
@@ -140,7 +142,7 @@ const Login = () => {
                                 autoComplete="family-name"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Enter your last name"
-                                defaultValue={createAccountInitialValues.lastName}
+                                value={createAccountFormik.values.lastName}
                                 onChange={createAccountFormik.handleChange}
                                 onBlur={createAccountFormik.handleBlur}
                             />
@@ -161,7 +163,7 @@ const Login = () => {
                                 autoComplete="family-name"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Enter your last name"
-                                defaultValue={createAccountInitialValues.email}
+                                value={createAccountFormik.values.email}
                                 onChange={createAccountFormik.handleChange}
                                 onBlur={createAccountFormik.handleBlur}
                             />
@@ -182,11 +184,11 @@ const Login = () => {
                                 autoComplete="password"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Enter your last name"
-                                defaultValue={createAccountInitialValues.password}
+                                value={createAccountFormik.values.password}
                                 onChange={createAccountFormik.handleChange}
                                 onBlur={createAccountFormik.handleBlur}
                             />
-                            {see.element2 ? <RemoveRedEyeIcon className='absolute right-3 top-2' onClick={() => handleClick("element2")} /> : <VisibilityOffIcon className='absolute right-3 top-2' onClick={() => handleClick("element2")} />}
+                            {see.element2 ? <RemoveRedEyeIcon className='absolute cursor-pointer right-3 top-2' onClick={() => handleClick("element2")} /> : <VisibilityOffIcon className='absolute right-3 top-2 cursor-pointer' onClick={() => handleClick("element2")} />}
                             {createAccountFormik.touched.password && createAccountFormik.errors.password ? <div style={{ color: 'red' }}>{createAccountFormik.errors.password}</div> : null}
                         </div>
                     </div>
@@ -204,11 +206,11 @@ const Login = () => {
                                 autoComplete="password"
                                 className="block w-full border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Confirm your password"
-                                defaultValue={createAccountInitialValues.confirmPassword}
+                                value={createAccountFormik.values.confirmPassword}
                                 onChange={createAccountFormik.handleChange}
                                 onBlur={createAccountFormik.handleBlur}
                             />
-                            {see.element3 ? <RemoveRedEyeIcon className='absolute right-3 top-2' onClick={() => handleClick("element3")} /> : <VisibilityOffIcon className='absolute right-3 top-2' onClick={() => handleClick("element3")} />}
+                            {see.element3 ? <RemoveRedEyeIcon className='absolute cursor-pointer right-3 top-2 border border-blue-600' onClick={() => handleClick("element3")} /> : <VisibilityOffIcon className='absolute right-3 top-2 cursor-pointer' onClick={() => handleClick("element3")} />}
                             {createAccountFormik.touched.confirmPassword && createAccountFormik.errors.confirmPassword ? <div style={{ color: 'red' }}>{createAccountFormik.errors.confirmPassword}</div> : null}
                         </div>
                     </div>

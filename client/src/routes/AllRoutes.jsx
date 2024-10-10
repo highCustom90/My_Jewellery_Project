@@ -9,6 +9,7 @@ import About from '../pages/About'
 import OurUsers from '../pages/OurUsers'
 import { Toaster } from 'react-hot-toast'
 import Login from '../pages/Login'
+import AddToCart from '../pages/AddToCart'
 
 const AllRoutes = () => {
     return (
@@ -17,6 +18,7 @@ const AllRoutes = () => {
                 <Route path="/" element={<Home />} />
                 <Route path='/engagement-ring' element={<EngagementRing />} />
                 <Route path="/singleprdetail/:shape" element={<SingleProductDetailShow />} />
+                <Route path='/wishlist' element={<AddToCart />} />
                 <Route path="/wedding-ring" element={<WeddingRings />} />
                 <Route path="/jewelry" element={<Jewelry />} />
                 <Route path="/about" element={<About />} />
