@@ -9,31 +9,26 @@ import Modal from '@mui/material/Modal';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
+import { useParams } from 'react-router-dom';
+import Rose_Gold from '../assets/diamondcolor/Rose_Gold.png';
+import White_Gold from '../assets/diamondcolor/White_Gold.png';
+import Yellow_Gold from '../assets/diamondcolor/Yellow_Gold.png';
 import { MediaQueryInMobileViewSlider, Slider1 } from '../sliders/Slider1';
-import { caratImage, diamondTypeImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
-import { useParams, useSearchParams } from 'react-router-dom';
-import Rose_Gold from '../assets/diamondcolor/Rose_Gold.png'
-import White_Gold from '../assets/diamondcolor/White_Gold.png'
-import Yellow_Gold from '../assets/diamondcolor/Yellow_Gold.png'
+import { diamondTypeImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
 import { MobileAccordianView } from '../utils/HelperFunctions';
 
 const SingleProductDetailShow = () => {
-
-  function preventHorizontalKeyboardNavigation(event) {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-      event.preventDefault();
-    }
-  }
+  //  all states
+  let { shape: getShapeNameForFetchWithShape } = useParams();
   const [value, setValue] = useState({ value: 0, size: 0.5 });
-  const { shape } = useParams();
-
   const [skinTone, setSkinTone] = useState(100); // Default value of the slider
-  const [getShapeNameWhenClick, setShapeNameWhenClick] = useState(shape);
+  const [getShapeNameWhenClick, setShapeNameWhenClick] = useState(getShapeNameForFetchWithShape);
+  const [marquise, setMarquise] = useState([]);
+  const [diamondSize, setDiamondSize] = useState([]);
 
+  //  all functions 
   const handleChange = (event, sec) => {
-
     const newValue = (event.target.value); // Get the new slider value
-    console.log(newValue, value.value)
     if (newValue)
       setValue(prev => {
         if (newValue > prev.size) {
@@ -53,35 +48,50 @@ const SingleProductDetailShow = () => {
 
   };
 
-
-  const [marquise, setMarquise] = useState([]);
-  const [diamondSize, setDiamondSize] = useState([]);
+  function preventHorizontalKeyboardNavigation(event) {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+    }
+  }
 
   // my imp work
-  const [Param, setParam] = useSearchParams();
-
   async function fetchFromDb(value, sizeValue) {
     let data = await axios.get("http://localhost:5050/rings");
     const shapes = data.data;
-    if (shapes[shape]) {
-      setMarquise(shapes[shape].gold);
-      setDiamondSize(shapes[shape].Goldsizes);
-      for (let i in shapes[shape]) {
+    if (shapes[getShapeNameWhenClick]) {
+      setMarquise(shapes[getShapeNameWhenClick].gold);
+      setDiamondSize(shapes[getShapeNameWhenClick].Goldsizes);
+      for (let i in shapes[getShapeNameWhenClick]) {
         if (value === i) {
-          setMarquise(shapes[shape][value]);
-          setDiamondSize(shapes[shape][sizeValue]);
+          setMarquise(shapes[getShapeNameWhenClick][value]);
+          setDiamondSize(shapes[getShapeNameWhenClick][sizeValue]);
         }
       }
     }
   }
+
   function ShapeNameWhenClick(index) {
-    setParam({ shape: diamondTypeImage[index].text })
-    setShapeNameWhenClick(diamondTypeImage[index].text)
-    // tommorrow work fetch with shape when user click andy shape here work is pending
+    setShapeNameWhenClick(diamondTypeImage[index].text);
+    setShapeNameWhenClick(diamondTypeImage[index].text);
   }
+
+  async function addToBag() {
+    let favListObjInfo = {
+      "diamondImage": diamondSize[value.value],
+      "title": "",
+    }
+    try {
+      const addDataToBag = await axios.post(`http://localhost:4500/addToCart`, favListObjInfo);
+      toast.success("Item added to Bag");
+
+    } catch (error) {
+      toast.error("Something Went Wrong");
+    }
+  }
+
   useEffect(() => {
     fetchFromDb();
-  }, [])
+  }, [getShapeNameWhenClick]);
 
   return (
     <>
@@ -180,15 +190,6 @@ const SingleProductDetailShow = () => {
               </Stack>
             </div>
 
-            {/* here is size of diamonds */}
-            {/* <div className='mt-5 mb-2'>
-              <Typography>Setting Carat Weight:1/15 ct. tw.</Typography>
-              <Stack direction={"row"} justifyContent={"space-around"} alignItems={"center"} className='lg:w-[35%] mt-2'>
-                <Box height={"35px"} width={"35px"} className="rounded-full cursor-pointer border border-custom-green text-center pt-1">1/15</Box>
-                <Box height={"35px"} width={"35px"} className="rounded-full cursor-pointer border border-custom-green text-center pt-1">1/10</Box>
-                <Box height={"35px"} width={"35px"} className="rounded-full cursor-pointer border border-custom-green text-center pt-1">1/3</Box>
-              </Stack>
-            </div> */}
 
             <div className='mt-5 mb-2'>
               <Typography>Diamond Origin: Natural</Typography>
@@ -198,7 +199,7 @@ const SingleProductDetailShow = () => {
               </Stack>
               <Box sx={{ width: "200px" }} className="sm:m-auto lg:m-0">
                 <Slider
-                  // value={value.size}
+                  value={value.size}
                   min={0.50}
                   step={0.50}
                   max={3}
@@ -233,7 +234,7 @@ const SingleProductDetailShow = () => {
                       <option value={"3"}>3</option>
                     </select>
                     <div className='flex items-center sm:justify-around mt-[20px] mdi:justify-start'>
-                      <button className='bg-custom-green text-white w-[250px] h-[37px]' style={{ padding: "8px 18px" }}>ADD TO BAG</button>
+                      <button className='bg-custom-green text-white w-[250px] h-[37px]' style={{ padding: "8px 18px" }} onClick={addToBag}>ADD TO BAG</button>
                       <FavoriteBorderIcon className='ms-3' />
                     </div>
                   </div>

@@ -45,43 +45,43 @@ const HomePageSlider = [
 const diamondTypeImage = [
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F55138dcf7c3047dca6b5977b9bceaf4c&w=96&q=75&dpl=v1726568742694",
-        text: "Round"
+        text: "round"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F22c1825bc7cd4236acfc621064075d10&w=96&q=75&dpl=v1726568742694",
-        text: "Emerald"
+        text: "oval"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F2acc984ca1624bf4839d6f375ddc059a&w=96&q=75&dpl=v1726568742694",
-        text: "Cushion"
+        text: "cushion"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F7e2bc1d339c04bfb86ccce73b23dff05&w=96&q=75&dpl=v1726568742694",
-        text: "Fusion"
+        text: "emerald"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F7622eace49424c43aba2b2036a6061fb&w=96&q=75&dpl=v1726568742694",
-        text: "Pear"
+        text: "pear"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fbe5ac40634a44cafb9d284665c460ae3&w=96&q=75&dpl=v1726568742694",
-        text: "Radiant"
+        text: "radiant"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252F1d10816b762443a7a26ab81434577157&w=96&q=75&dpl=v1726568742694",
-        text: "Princess"
+        text: "princess"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fdf8bb60052394b09aaaebfe5ac0cb15c&w=96&q=75&dpl=v1726568742694",
-        text: "Marquise"
+        text: "marquise"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fa7b5fe16e8304920a5ac539739b968b6&w=96&q=75&dpl=v1726568742694",
-        text: "Asscher"
+        text: "asser"
     },
     {
         url: "https://www.brilliantearth.com/_next/image/?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252F9f2a69003c86470ea05deb9ecb9887be%252Fa4fe27053d254a218e0a7f3c15526a0a&w=96&q=75&dpl=v1726568742694",
-        text: "Heart"
+        text: "heart"
     },
 ]
 

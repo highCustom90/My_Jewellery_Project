@@ -164,37 +164,7 @@ const Navbar = () => {
                                 </DisclosureButton>
                             ))}
                         </div>
-                        {/* <div className="border-t border-gray-700 pb-3 pt-4">
-                            <div className="flex items-center px-5">
-                                <div className="flex-shrink-0">
-                                    <img alt="" src={user.imageUrl} className="h-10 w-10 rounded-full" />
-                                </div>
-                                <div className="ml-3">
-                                    <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                                    <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
-                                </div>
-                                <button
-                                    type="button"
-                                    className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                >
-                                    <span className="absolute -inset-1.5" />
-                                    <span className="sr-only">View notifications</span>
-                                    <BellIcon aria-hidden="true" className="h-6 w-6" />
-                                </button>
-                            </div>
-                            <div className="mt-3 space-y-1 px-2">
-                                {userNavigation.map((item) => (
-                                    <DisclosureButton
-                                        key={item.name}
-                                        as="a"
-                                        href={item.href}
-                                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                                    >
-                                        {item.name}
-                                    </DisclosureButton>
-                                ))}
-                            </div>
-                        </div> */}
+
                     </DisclosurePanel>
                 </Disclosure>
 
@@ -214,9 +184,9 @@ const Navbar = () => {
                                     className={`input input-bordered input-sm w-full max-w-xs ${theme == "dark" ? "text-black" : "text-black"}`} />
                                 <SearchIcon className='absolute right-3' />
                             </Typography>
-                            <Typography className='cursor-pointer' to={'/'}><PersonIcon /></Typography>
+                            <Typography className='cursor-pointer' to={'/'} title="Profile"><Link to={'/login'}><PersonIcon /></Link></Typography>
                             <Typography className='cursor-pointer' to={'/'}><FavoriteOutlinedIcon /></Typography>
-                            <Typography className='cursor-pointer' to={'/'}><ShoppingBagOutlinedIcon /></Typography>
+                            <Typography className='cursor-pointer' to={'/'} title="wishlist"><Link to={'/wishlist'}><ShoppingBagOutlinedIcon /></Link></Typography>
                             <Menu as="div" className="relative ml-3">
                                 <div>
                                     <MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
