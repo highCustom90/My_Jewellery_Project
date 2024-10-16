@@ -61,7 +61,6 @@ app.post("/signin/user", async (req, res) => { // Changed to POST
 
         // If everything is fine, send success response
         res.status(200).json({ message: "Login successful", token });
-
     } catch (error) {
         console.error("Error during login:", error);
         res.status(500).send({ message: "Server error" });
@@ -69,7 +68,7 @@ app.post("/signin/user", async (req, res) => { // Changed to POST
 });
 
 
-// this is user signin api
+// this is user singup api
 app.post("/createacc/user", async (req, res) => {
     try {
         const { email, password, name, lastName } = req.body;
@@ -88,9 +87,10 @@ app.post("/createacc/user", async (req, res) => {
         // Hash the password before saving it
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = new UserAccounts({ email, name, lastName, password: hashedPassword });
-
         await user.save();
-        res.status(201).json({ message: "Account successfully created" }); // Use 201 for successful creation
+        // assign jwt token
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
+        res.status(201).json({ message: "Account successfully created", token }); // Use 201 for successful creation
     } catch (error) {
         res.status(500).json({ message: "Error creating user" });
     }
@@ -116,16 +116,34 @@ app.get('/api/images', (req, res) => {
 
 
 app.post("/addToCart", verifyToken, async (req, res) => {
-    
+    const findUserWhenSignIn = await UserAccounts.findById(req.user.userId);
+    if (!findUserWhenSignIn) {
+        res.send("Please Create Account or Sign Up");
+    }
+    findUserWhenSignIn.cart.push(req.body);
+    await findUserWhenSignIn.save();
+    res.status(200).send("Item added to cart");
 })
 
-
-// tp for token check
-app.get("/getpr", verifyToken, (req, res) => {
-
-    res.send("hii iam getting")
+// get add to cart data
+app.get("/getCartData", verifyToken, async (req, res) => {
+    const findUserWhenSignIn = await UserAccounts.findById(req.user.userId);
+    if (!findUserWhenSignIn) {
+        res.status(400).send("Please Create Account or Sign Up");
+    }
+    res.send(findUserWhenSignIn.cart);
 })
 
+// add to cart data delete api
+app.delete("/deleteCartItem/:id", verifyToken, async (req, res) => {
+    const findUserWhenSignIn = await UserAccounts.findById(req.user.userId);
+    if (!findUserWhenSignIn) {
+        res.status(400).send("Please Create Account or Sign Up");
+    }
+    findUserWhenSignIn.cart = findUserWhenSignIn.cart.filter((item) => item.id.toString() !== req.params.id);
+    await findUserWhenSignIn.save();
+    res.send("Item deleted from cart");
+})
 app.listen(4500, () => {
     console.log("Server is running on port 4500");
 });

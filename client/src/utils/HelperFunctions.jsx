@@ -153,6 +153,7 @@ async function createAccountFunc(values, { resetForm }) {
             pauseOnHover: false,    // Make sure the toast doesn't pause when hovered (optional)
             draggable: true,        // Allow the toast to be draggable (optional)
         });
+        localStorage.setItem("token", userAccVerify.data.token);
     } catch (error) {
         toast.error(error?.response?.data?.message, {
             hideProgressBar: false, // This enables the progress bar (default is true)
@@ -163,7 +164,6 @@ async function createAccountFunc(values, { resetForm }) {
         });
     } finally {
         resetForm();
-        console.log("hasdfjlk")
     }
 }
 // singinaccount func email pass only
@@ -178,12 +178,11 @@ async function signInAccountFunc(values, { resetForm }) {
             draggable: true,        // Allow the toast to be draggable (optional)
         });
         localStorage.setItem("token", userAccVerify.data.token);
-        resetForm();
     } catch (error) {
         toast.error(error.response.data.message || "Error Signing in");
         resetForm();
     }
-}
+}    
 
 // Validation Schemas
 const signInValidationSchema = Yup.object({
