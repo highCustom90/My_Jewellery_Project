@@ -27,7 +27,7 @@ const SingleProductDetailShow = () => {
   const [diamondSize, setDiamondSize] = useState([]);
 
   //  all functions 
-  const handleChange = (event, sec) => {
+  const handleChange = (event) => {
     const newValue = (event.target.value); // Get the new slider value
     if (newValue)
       setValue(prev => {
@@ -72,20 +72,30 @@ const SingleProductDetailShow = () => {
 
   function ShapeNameWhenClick(index) {
     setShapeNameWhenClick(diamondTypeImage[index].text);
-    setShapeNameWhenClick(diamondTypeImage[index].text);
   }
 
   async function addToBag() {
     let favListObjInfo = {
-      "diamondImage": diamondSize[value.value],
-      "title": "",
+      id: Math.floor(Math.random() * 1000),
+      diamondImage: diamondSize[value.value],
+      title: getShapeNameWhenClick,
     }
-    try {
-      const addDataToBag = await axios.post(`http://localhost:4500/addToCart`, favListObjInfo);
-      toast.success("Item added to Bag");
-
-    } catch (error) {
-      toast.error("Something Went Wrong");
+    const checkToken = localStorage.getItem("token");
+    if (!checkToken) {
+      toast.error("Create Account or Signin please");
+    } else {
+      try {
+        const addDataToBag = await axios.post(`http://localhost:4500/addToCart`, favListObjInfo, {
+          headers: {
+            authorization: `Bearer ${checkToken}`
+          }
+        });
+        if (addDataToBag.status === 200) {
+          toast.success(addDataToBag.data);
+        }
+      } catch (error) {
+        toast.error("Something Went Wrong");
+      }
     }
   }
 

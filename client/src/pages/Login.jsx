@@ -7,8 +7,6 @@ import { useFormik } from 'formik';
 
 const Login = () => {
 
-
-
     const [see, setSee] = useState({
         element1: false,
         element2: false,
@@ -32,7 +30,6 @@ const Login = () => {
 
     return (
         <div className="flex items-center h-screen justify-center sm:flex-col lg:flex-row">
-
             <div>
                 <div>
                     <Typography variant="h4" pb={"10px"}>
@@ -43,7 +40,6 @@ const Login = () => {
                         If you have a High Custom customer account, <br /> please sign in.
                     </Typography>
                 </div>
-
                 <form onSubmit={signupFormik.handleSubmit} className="mt-10 grid grid-cols-1 sm:grid-cols-12 w-[300px] sm:m-auto sm:mt-8">
                     {/* email field */}
                     <div className="sm:col-span-12 lg:col-span-12">
