@@ -1,15 +1,19 @@
 const express = require("express");
 const cloudinary = require('cloudinary').v2;
 const cors = require("cors");
-const bcrypt = require("bcrypt"); // For password hashing
-const jwt = require("jsonwebtoken")
 const User = require("./models/user");
 const UserAccounts = require("./models/userAccounts");
 const { verifyToken } = require("./middlewares/tokenVerifier");
+const { SignIn, SignUP } = require("./controllers/authController");
+const connectDB = require("./config/db");
+const { addToCartController, deleteCartItem, getCartData } = require("./controllers/addToCartController");
 require('dotenv').config();
 const app = express();
+
 app.use(cors());
 app.use(express.json());
+// connect with db
+connectDB();
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
     api_key: process.env.CLOUDINARY_API,
@@ -17,7 +21,6 @@ cloudinary.config({
     secure: true,
     cname: "images.High_Custom_Jewellers.com"
 });
-
 
 // this is drop hint api
 app.post("/login", async (req, res) => {
@@ -31,70 +34,14 @@ app.post("/login", async (req, res) => {
         res.status(500).send({ message: "Error saving user" });
     }
 });
+// don't touch here
 
 // this is user login api
-app.post("/signin/user", async (req, res) => { // Changed to POST
-    try {
-        const { email, password } = req.body;
-
-        // Check if email and password are provided
-        if (!email || !password) {
-            return res.status(400).send({ message: "Email and password are required" });
-        }
-
-        // Find user by email
-        const user = await UserAccounts.findOne({ email: email });
-
-        if (!user) {
-            return res.status(404).send({ message: "User not found" });
-        }
-
-        // Compare the password using bcrypt
-        const validPassword = await bcrypt.compare(password, user.password);
-
-        if (!validPassword) {
-            return res.status(400).send({ message: "Invalid password" });
-        }
-
-        // assign jwt token
-        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
-
-        // If everything is fine, send success response
-        res.status(200).json({ message: "Login successful", token });
-    } catch (error) {
-        console.error("Error during login:", error);
-        res.status(500).send({ message: "Server error" });
-    }
-});
+app.post("/signin/user", SignIn);
 
 
 // this is user singup api
-app.post("/createacc/user", async (req, res) => {
-    try {
-        const { email, password, name, lastName } = req.body;
-
-        // Validate input
-        if (!email || !password || !name || !lastName) {
-            return res.status(400).json({ message: "All fields are required" });
-        }
-
-        // Check if the email already exists
-        const existingUser = await UserAccounts.findOne({ email });
-        if (existingUser) {
-            return res.status(409).json({ message: "Email already in use" });
-        }
-
-        // Hash the password before saving it
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const user = new UserAccounts({ email, name, lastName, password: hashedPassword });
-        await user.save();
-        // assign jwt token
-        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
-        res.status(201).json({ message: "Account successfully created", token }); // Use 201 for successful creation
-    } catch (error) {
-        res.status(500).json({ message: "Error creating user" });
-    }
-});
+app.post("/createacc/user", SignUP);
 
 
 // get all images from cloudinary
@@ -114,37 +61,18 @@ app.get('/api/images', (req, res) => {
     );
 });
 
-
-app.post("/addToCart", verifyToken, async (req, res) => {
-    const findUserWhenSignIn = await UserAccounts.findById(req.user.userId);
-    if (!findUserWhenSignIn) {
-        res.send("Please Create Account or Sign Up");
-    }
-    findUserWhenSignIn.cart.push(req.body);
-    await findUserWhenSignIn.save();
-    res.status(200).send("Item added to cart");
-})
+// this is addtocart api
+app.post("/addToCart", verifyToken, addToCartController)
 
 // get add to cart data
-app.get("/getCartData", verifyToken, async (req, res) => {
-    const findUserWhenSignIn = await UserAccounts.findById(req.user.userId);
-    if (!findUserWhenSignIn) {
-        res.status(400).send("Please Create Account or Sign Up");
-    }
-    res.send(findUserWhenSignIn.cart);
-})
+app.get("/getCartData", verifyToken, getCartData)
 
 // add to cart data delete api
-app.delete("/deleteCartItem/:id", verifyToken, async (req, res) => {
-    const findUserWhenSignIn = await UserAccounts.findById(req.user.userId);
-    if (!findUserWhenSignIn) {
-        res.status(400).send("Please Create Account or Sign Up");
-    }
-    findUserWhenSignIn.cart = findUserWhenSignIn.cart.filter((item) => item.id.toString() !== req.params.id);
-    await findUserWhenSignIn.save();
-    res.send("Item deleted from cart");
-})
-app.listen(4500, () => {
+app.delete("/deleteCartItem/:id", verifyToken, deleteCartItem);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
     console.log("Server is running on port 4500");
 });
 
+   
