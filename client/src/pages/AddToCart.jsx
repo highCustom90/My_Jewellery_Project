@@ -28,7 +28,7 @@ const AddToCart = () => {
     } else {
       const deleteProduct = await axios.delete(`http://localhost:4500/deleteCartItem/${id}`, {
         headers: {
-          authorization: `Bearer ${checkToken}`
+          authorization: `Bearer ${checkToken}` 
         }
       })
       if (deleteProduct.status === 200) {

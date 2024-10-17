@@ -4,9 +4,10 @@ import { Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, signInAccountFunc, signInInitialValues, signInValidationSchema } from '../utils/HelperFunctions';
 import { useFormik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-
+    const navigate = useNavigate();
     const [see, setSee] = useState({
         element1: false,
         element2: false,
@@ -19,13 +20,13 @@ const Login = () => {
     const createAccountFormik = useFormik({
         initialValues: createAccountInitialValues,
         validationSchema: createAccountValidationSchema,
-        onSubmit: createAccountFunc
+        onSubmit: (values, { resetForm }) => { createAccountFunc(values, { resetForm }, navigate) }
     })
 
     const signupFormik = useFormik({
         initialValues: signInInitialValues,
         validationSchema: signInValidationSchema,
-        onSubmit: signInAccountFunc
+        onSubmit: (values, { resetForm }) => { signInAccountFunc(values, { resetForm }, navigate) }
     });
 
     return (

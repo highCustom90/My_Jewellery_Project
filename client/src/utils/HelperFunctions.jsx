@@ -3,11 +3,13 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Stack, Typography } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import Loader from '../pages/Loader';
 import toast from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 // Engagement Image Changer Component
 const EngagementImageChanger = () => {
     const [images, setImages] = useState([]);
@@ -143,7 +145,8 @@ const MobileAccordianView = () => {
 let signInInitialValues = { email: '', password: '' };
 let createAccountInitialValues = { name: '', lastName: '', email: '', password: '', confirmPassword: '' };
 // loginaccount func
-async function createAccountFunc(values, { resetForm }) {
+async function createAccountFunc(values, { resetForm }, navigate) {
+
     try {
         const userAccVerify = await axios.post("http://localhost:4500/createacc/user", values);
         toast.success(userAccVerify.data.message, {
@@ -154,6 +157,7 @@ async function createAccountFunc(values, { resetForm }) {
             draggable: true,        // Allow the toast to be draggable (optional)
         });
         localStorage.setItem("token", userAccVerify.data.token);
+        navigate("/engagement-ring");
     } catch (error) {
         toast.error(error?.response?.data?.message, {
             hideProgressBar: false, // This enables the progress bar (default is true)
@@ -167,7 +171,8 @@ async function createAccountFunc(values, { resetForm }) {
     }
 }
 // singinaccount func email pass only
-async function signInAccountFunc(values, { resetForm }) {
+async function signInAccountFunc(values, { resetForm }, navigate) {
+
     try {
         const userAccVerify = await axios.post("http://localhost:4500/signin/user", values);
         toast.success(userAccVerify.data.message, {
@@ -178,11 +183,13 @@ async function signInAccountFunc(values, { resetForm }) {
             draggable: true,        // Allow the toast to be draggable (optional)
         });
         localStorage.setItem("token", userAccVerify.data.token);
+        navigate("/engagement-ring");
     } catch (error) {
         toast.error(error.response.data.message || "Error Signing in");
+    } finally {
         resetForm();
     }
-}    
+}
 
 // Validation Schemas
 const signInValidationSchema = Yup.object({
