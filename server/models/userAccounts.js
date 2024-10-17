@@ -1,9 +1,6 @@
 // here all users accounts
 // with their own accoutn and here db name is useraccounts
-const mongoose = require("mongoose")
-const mongooseUrl = ("mongodb://localhost:27017/users");
-mongoose.connect(mongooseUrl);
-
+const mongoose = require("mongoose");
 const UserAccountSchema = new mongoose.Schema({
     name: {
         type: String,
