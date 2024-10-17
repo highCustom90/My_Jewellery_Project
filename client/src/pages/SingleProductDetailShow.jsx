@@ -94,7 +94,7 @@ const SingleProductDetailShow = () => {
           toast.success(addDataToBag.data);
         }
       } catch (error) {
-        toast.error("Something Went Wrong");
+        toast.error("Something Went Wrong Please Signin or SignUp and Try Again");
       }
     }
   }
@@ -110,7 +110,7 @@ const SingleProductDetailShow = () => {
           <div className='lg:flex sm:hidden lg:w-[100%] flex-wrap lg:justify-between sm:justify-around items-center'>
             {/* here we use multipleProdcutImage array */}
             {marquise.map((url, index) => (
-              <Box className="mb-5 lg:w-[350px] lg:h-[350px] sm:w-[150px] sm:h-[150px]" key={index}>
+              <Box className="mb-5 lg:w-[340px] lg:h-[340px] sm:w-[150px] sm:h-[150px]" key={index}>
                 <img
                   className='h-full w-full relative'
                   src={index == 0 ? diamondSize[value.value] : url}
