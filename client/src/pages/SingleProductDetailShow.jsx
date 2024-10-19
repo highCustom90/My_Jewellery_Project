@@ -85,7 +85,7 @@ const SingleProductDetailShow = () => {
       toast.error("Create Account or Signin please");
     } else {
       try {
-        const addDataToBag = await axios.post(`http://localhost:4500/addToCart`, favListObjInfo, {
+        const addDataToBag = await axios.post(`http://localhost:4500/cart/addToCart`, favListObjInfo, {
           headers: {
             authorization: `Bearer ${checkToken}`
           }

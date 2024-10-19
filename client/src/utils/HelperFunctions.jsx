@@ -148,7 +148,7 @@ let createAccountInitialValues = { name: '', lastName: '', email: '', password: 
 async function createAccountFunc(values, { resetForm }, navigate) {
 
     try {
-        const userAccVerify = await axios.post("http://localhost:4500/createacc/user", values);
+        const userAccVerify = await axios.post("http://localhost:4500/auth/createacc/user", values);
         toast.success(userAccVerify.data.message, {
             hideProgressBar: true, // This enables the progress bar (default is true)
             closeOnClick: true,     // Close the toast on click
@@ -174,7 +174,7 @@ async function createAccountFunc(values, { resetForm }, navigate) {
 async function signInAccountFunc(values, { resetForm }, navigate) {
 
     try {
-        const userAccVerify = await axios.post("http://localhost:4500/signin/user", values);
+        const userAccVerify = await axios.post("http://localhost:4500/auth/signin/user", values);
         toast.success(userAccVerify.data.message, {
             hideProgressBar: false, // This enables the progress bar (default is true)
             closeOnClick: true,     // Close the toast on click
