@@ -11,7 +11,7 @@ const AddToCart = () => {
     if (!checkToken) {
       toast.error("You Can't See your wishlist Without Account");
     } else {
-      const getUserCartData = await axios.get("http://localhost:4500/getCartData", {
+      const getUserCartData = await axios.get("http://localhost:4500/cart/getCartData", {
         headers: {
           authorization: `Bearer ${checkToken}`
         }
@@ -26,9 +26,9 @@ const AddToCart = () => {
     if (!checkToken) {
       toast.error("Create Account or Sigin Please");
     } else {
-      const deleteProduct = await axios.delete(`http://localhost:4500/deleteCartItem/${id}`, {
+      const deleteProduct = await axios.delete(`http://localhost:4500/cart/deleteCartItem/${id}`, {
         headers: {
-          authorization: `Bearer ${checkToken}` 
+          authorization: `Bearer ${checkToken}`
         }
       })
       if (deleteProduct.status === 200) {
@@ -37,7 +37,7 @@ const AddToCart = () => {
       }
     }
   }
-  
+
   useEffect(() => {
     getCartData();
   }, []);
@@ -62,7 +62,7 @@ const AddToCart = () => {
       )) :
         <div className='m-auto mt-12'>
           <h1 className='mb-3'>Your  wishlist is empty</h1>
-          <button className='btn btn-primary text-white'><Link to={"/"}>Add to wishlist</Link></button>
+          <button className='btn btn-primary text-white'><Link to={"/engagement-ring"}>Add to wishlist</Link></button>
         </div>
       }
     </div>
