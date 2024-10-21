@@ -440,57 +440,5 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045807/BE1D54_white_Heart_top_3_carat_sjmtoz.png"
             ]
         }
-    },
-    "bracelets": [
-        {
-            "id": 1,
-            "category": "Charm Bracelet",
-            "image": "https://picsum.photos/300/300?random=1"
-        },
-        {
-            "id": 2,
-            "category": "Bangle Bracelet",
-            "image": "https://picsum.photos/300/300?random=2"
-        },
-        {
-            "id": 3,
-            "category": "Cuff Bracelet",
-            "image": "https://picsum.photos/300/300?random=3"
-        },
-        {
-            "id": 4,
-            "category": "Beaded Bracelet",
-            "image": "https://picsum.photos/300/300?random=4"
-        },
-        {
-            "id": 5,
-            "category": "Link Bracelet",
-            "image": "https://picsum.photos/300/300?random=5"
-        },
-        {
-            "id": 6,
-            "category": "Tennis Bracelet",
-            "image": "https://picsum.photos/300/300?random=6"
-        },
-        {
-            "id": 7,
-            "category": "Leather Bracelet",
-            "image": "https://picsum.photos/300/300?random=7"
-        },
-        {
-            "id": 8,
-            "category": "Friendship Bracelet",
-            "image": "https://picsum.photos/300/300?random=8"
-        },
-        {
-            "id": 9,
-            "category": "Anklet Bracelet",
-            "image": "https://picsum.photos/300/300?random=9"
-        },
-        {
-            "id": 10,
-            "category": "ID Bracelet",
-            "image": "https://picsum.photos/300/300?random=10"
-        }
-    ]
+    }
 }

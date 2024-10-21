@@ -24,10 +24,10 @@ cloudinary.config({
     api_key: process.env.CLOUDINARY_API,
     api_secret: process.env.CLOUDINARY_API_SECRET,
     secure: true,
-    cname: "images.High_Custom_Jewellers.com"
+    // cname: "images.High_Custom_Jewellers.com"
 });
 
-// // get all images from cloudinary
+// get all images from cloudinary
 app.get('/api/images', (req, res) => {
     cloudinary.api.resources(
         {
@@ -42,6 +42,7 @@ app.get('/api/images', (req, res) => {
             }
         }
     );
+
 });
 
 const PORT = process.env.PORT || 5000;

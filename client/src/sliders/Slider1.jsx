@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -10,8 +10,15 @@ import 'swiper/css/pagination';
 import { EffectCube, FreeMode, Grid, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import { multipleProductImage } from '../utils/AllImagesProvider';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Slider1 = ({ data }) => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once
+        });
+    }, []);
     return (
         <Swiper
             slidesPerView={3}
@@ -25,7 +32,8 @@ const Slider1 = ({ data }) => {
         >
             {data.map(({ url, text }, index) => (
                 <SwiperSlide key={index}>
-                    <div>
+                    <div data-aos="fade-up"
+                        data-aos-anchor-placement="center-center">
                         <img src={url} alt="not found" className='h-full w-full' />
                     </div>
                     <Typography variant='h5' className='sm:hidden lg:block'>{text}</Typography>
