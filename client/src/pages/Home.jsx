@@ -1,14 +1,18 @@
 import { Box, Button, Typography } from "@mui/material"
-import React from "react"
+import React, { useEffect } from "react"
 import { BoxSlider, Slider1 } from "../sliders/Slider1"
 import { Link, Outlet } from "react-router-dom"
 import { diamondTypeImage, HomePageSlider, sec1Image } from "../utils/AllImagesProvider"
-
-
-
+import image from "../../db.json"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Home = () => {
-
-
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once
+        });
+    }, []);
     return (
         <div>
             <div style={{ height: "516px" }} className="overflow-hidden">
@@ -42,7 +46,7 @@ const Home = () => {
                 <Outlet />
             </div>
 
-            <div className="h-[135px] mt-20 border border-blue-600 w-[80%] m-auto flex flex-wrap items-center justify-center text-white mb-12 overflow-hidden" style={{ backgroundColor: "#183e40" }}>
+            <div data-aos="fade-right" className="h-[135px] mt-20 border border-blue-600 w-[80%] m-auto flex flex-wrap items-center justify-center text-white mb-12 overflow-hidden" style={{ backgroundColor: "#183e40" }}>
                 <div className="w-[220px] h-[135px]">
                     <img src="https://image.brilliantearth.com/media/thumbnail/de/18/de188bc6df9cc2c06834a5d962da22e2.jpg" alt="something wrong" className="object-cover" />
                 </div>

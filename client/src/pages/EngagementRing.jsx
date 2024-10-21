@@ -46,7 +46,7 @@ const EngagementRing = () => {
                 <Typography className='p-3 bg-black text-white'>Sorted By</Typography>
             </Stack>
 
-            {/* here image changer that 200 images */}
+            {/* here image changer that 500 images */}
             <EngagementImageChanger />
 
             <div className='mt-14'>
