@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const Home = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1000, // Animation duration
+            duration: 1500, // Animation duration
             once: false, // Whether animation should happen only once
         });
     }, []);
@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="flex items-center w-[80%] m-auto flex-wrap sm:flex-col lg:flex-row overflow-hidden">
+            <div className="flex items-center w-[80%] m-auto flex-wrap sm:flex-col lg:flex-row overflow-hidden" data-aos="fade-left">
                 <Box className="sm:w-[100%] lg:w-[50%]" sx={{ height: "545px", }}>
                     <img src="https://image.brilliantearth.com/cdn-cgi/image/width=720,height=545,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F2b97ad24918c460f9c5b1dd53ab6686d" alt="image not found" className="h-full w-full object-cover" />
                 </Box>
@@ -74,7 +74,7 @@ const Home = () => {
                 <Typography variant="h4" className="sm:text-2xl">Popular Engagement Ring Styles</Typography>
                 <div className="mt-5 flex items-center lg:justify-between sm:justify-center flex-wrap">
                     {sec1Image.map(({ url, text }, index) => (
-                        <Box sx={{ height: "396px", width: "342px" }} key={index} className="sm:mb-8">
+                        <Box sx={{ height: "396px", width: "342px" }} key={index} className="sm:mb-8" data-aos="zoom-in-up">
                             <img src={url} alt="image not found" className="object-cover" />
                             <Typography variant="h5" >{text}</Typography>
                         </Box>
@@ -83,13 +83,13 @@ const Home = () => {
             </section>
 
             <section className="w-[80%] m-auto mt-28 sm:text-center lg:text-left">
-                <Box sx={{ height: "456px" }}>
+                <Box sx={{ height: "456px" }} data-aos="flip-left">
                     <img src="https://image.brilliantearth.com/cdn-cgi/image/width=1376,height=600,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F3952d226a12943c794775fbccdf7277e" alt="image not found" className="w-full h-full object-cover object-center" />
                     <Typography sx={{ marginBottom: "24px" }}>Discover all the details that make it live up to its name.</Typography>
                     <Button className="border w-[303px]" variant="outlined" color="black" sx={{ "&:hover": { backgroundColor: "black", color: "white" } }}>Shop Now</Button>
                 </Box>
 
-                <Box sx={{ height: "626px", marginTop: "120px" }}>
+                <Box sx={{ height: "626px", marginTop: "120px" }} data-aos="flip-up">
                     <img src="https://image.brilliantearth.com/cdn-cgi/image/width=1376,height=600,quality=100,format=auto/https://cdn.builder.io/api/v1/image/assets%2F9f2a69003c86470ea05deb9ecb9887be%2F96c8bfbd49de468babfdeefa3faf6125" alt="" className="w-full h-full object-cover" />
                     <Typography variant="h4" sx={{ marginTop: "16px" }}>We're Here for You, In Person and Online</Typography>
                     <Typography color="#2c2c2c">Whether it’s at a store near you or online, we curate your appointment just for you.</Typography>

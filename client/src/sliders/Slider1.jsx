@@ -15,7 +15,7 @@ import 'aos/dist/aos.css';
 const Slider1 = ({ data }) => {
     useEffect(() => {
         AOS.init({
-            duration: 1000, // Animation duration
+            duration: 1500, // Animation duration
             once: false, // Whether animation should happen only once
         });
     }, []);

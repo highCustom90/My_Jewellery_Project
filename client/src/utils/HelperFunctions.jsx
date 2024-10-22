@@ -1,13 +1,14 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Stack, Typography } from '@mui/material';
+import Aos from 'aos';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from 'yup';
 import Loader from '../pages/Loader';
-import toast from 'react-hot-toast';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 // Engagement Image Changer Component
@@ -17,6 +18,12 @@ const EngagementImageChanger = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+
+        Aos.init({
+            duration: 1500, // Animation duration
+            once: false, // Whether animation should happen only once
+        });
+
         const fetchImages = async () => {
             try {
                 const res = await axios.get('http://localhost:4500/api/images');
@@ -42,7 +49,7 @@ const EngagementImageChanger = () => {
     return loading ? <Loader /> : (
         <Stack direction="row" flexWrap="wrap" justifyContent="space-between" alignItems="center" className='mt-14 sm:justify-center'>
             {images.map(({ url, display_name }, index) => (
-                <Box key={index} width="290px" height="376px" className="mb-8 text-center m-auto">
+                <Box key={index} width="290px" height="376px" className="mb-8 text-center m-auto" data-aos="zoom-in">
                     <Link to={`/singleprdetail/${display_name}`}>
                         <img src={url} alt={"text"} className='h-full w-full object-cover object-center' />
                     </Link>
@@ -208,5 +215,5 @@ const createAccountValidationSchema = Yup.object({
 
 
 // Export
-export { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, EngagementAccordion, EngagementImageChanger, signInAccountFunc, signInInitialValues, signInValidationSchema, MobileAccordianView };
+export { createAccountFunc, createAccountInitialValues, createAccountValidationSchema, EngagementAccordion, EngagementImageChanger, MobileAccordianView, signInAccountFunc, signInInitialValues, signInValidationSchema };
 

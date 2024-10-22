@@ -27,6 +27,7 @@ cloudinary.config({
     // cname: "images.High_Custom_Jewellers.com"
 });
 
+
 // get all images from cloudinary
 app.get('/api/images', (req, res) => {
     cloudinary.api.resources(
@@ -38,6 +39,12 @@ app.get('/api/images', (req, res) => {
             if (error) {
                 res.status(500).json({ error });
             } else {
+                // this is function of permently image delete from folder
+                // result.resources.forEach(el => {
+                //     cloudinary.uploader.destroy(el.public_id, { invalidate: true }, function (error, result) {
+                //         console.log(result, error);
+                //     });
+                // });
                 res.json(result.resources);
             }
         }
