@@ -1,21 +1,38 @@
 import { Box, Button, Typography } from "@mui/material"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import React, { useEffect } from "react"
-import { BoxSlider, Slider1 } from "../sliders/Slider1"
 import { Link, Outlet } from "react-router-dom"
+import { Tilt } from 'react-tilt'
+import { BoxSlider, Slider1 } from "../sliders/Slider1"
 import { diamondTypeImage, HomePageSlider, sec1Image } from "../utils/AllImagesProvider"
-import image from "../../db.json"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
+
+const defaultOptions = {
+    reverse: false,  // reverse the tilt direction
+    max: 35,     // max tilt rotation (degrees)
+    perspective: 1000,   // Transform perspective, the lower the more extreme the tilt gets.
+    scale: 1.2,    // 2 = 200%, 1.5 = 150%, etc..
+    speed: 1000,   // Speed of the enter/exit transition
+    transition: true,   // Set a transition on enter/exit.
+    axis: null,   // What axis should be disabled. Can be X or Y.
+    reset: true,    // If the tilt effect has to be reset on exit.
+    easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
+
 const Home = () => {
+
     useEffect(() => {
         AOS.init({
             duration: 1500, // Animation duration
             once: false, // Whether animation should happen only once
         });
     }, []);
+
     return (
         <div>
-            <div style={{ height: "516px" }} className="overflow-hidden">
+
+            <div style={{ height: "516px" }} className="overflow-hidden m-auto">
                 <video
                     src="src\assets\videos\rose.mp4"
                     autoPlay
@@ -30,12 +47,13 @@ const Home = () => {
 
                 <div className="w-[80%] m-auto flex justify-between mt-5 flex-wrap items-center">
                     {diamondTypeImage.map(({ url, text }, index) => (
-                        <div key={index}>
-                            <img src={url} className="w-[70px] h-[70px] object-cover" alt="something went wrong" />
-                            <span>{text}</span>
-                        </div>
+                        <Tilt options={defaultOptions} key={index}>
+                            <div>
+                                <img src={url} className="w-[70px] h-[70px] object-cover" alt="something went wrong" />
+                                <span>{text}</span>
+                            </div>
+                        </Tilt>
                     ))
-
                     }
                 </div>
             </div>
