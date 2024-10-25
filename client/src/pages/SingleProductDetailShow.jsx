@@ -6,6 +6,7 @@ import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import StarIcon from '@mui/icons-material/Star';
 import { Avatar, Box, Button, Slider, Stack, Typography } from '@mui/material';
 import Modal from '@mui/material/Modal';
+import Aos from 'aos';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
@@ -16,6 +17,7 @@ import Yellow_Gold from '../assets/diamondcolor/Yellow_Gold.png';
 import { MediaQueryInMobileViewSlider, Slider1 } from '../sliders/Slider1';
 import { diamondTypeImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
 import { MobileAccordianView } from '../utils/HelperFunctions';
+
 
 const SingleProductDetailShow = () => {
   //  all states
@@ -103,6 +105,12 @@ const SingleProductDetailShow = () => {
     fetchFromDb();
   }, [getShapeNameWhenClick]);
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1500, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, [])
   return (
     <>
       <div className='flex lg:w-[80%] mdi:w-[80%] m-auto sm:flex-col lg:flex-row overflow-hidden'>
@@ -110,14 +118,15 @@ const SingleProductDetailShow = () => {
           <div className='lg:flex sm:hidden lg:w-[100%] flex-wrap lg:justify-between sm:justify-around items-center'>
             {/* here we use multipleProdcutImage array */}
             {marquise.map((url, index) => (
-              <Box className="mb-5 lg:w-[340px] lg:h-[340px] sm:w-[150px] sm:h-[150px]" key={index}>
+              <Box className="mb-5 lg:w-[340px] lg:h-[340px] sm:w-[150px] sm:h-[150px]" key={index} data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine">
                 <img
                   className='h-full w-full relative'
                   src={index == 0 ? diamondSize[value.value] : url}
                   alt="something went wrong"
                   style={index === 3 ? { filter: `brightness(${skinTone}%)` } : {}}
                 />
-
                 {index === 3 &&
                   <Box sx={{ height: "150px" }} className="relative">
                     <Slider
@@ -289,7 +298,7 @@ const SingleProductDetailShow = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       <div className='lg:w-[80%] mdi:w-[80%] m-auto mt-20'>
         <Typography variant='h6'>Other Engagement Rings You'll Love</Typography>

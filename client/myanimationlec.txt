@@ -1,0 +1,37 @@
+gsap tutorial
+
+if you want element animate one by one then use
+stagger propertry
+gsap.from(ele,{
+stagger:time
+})
+
+if you want element animate repeat 
+gsap.from(ele,{
+reapeat:number, and for repeat -1
+})
+
+if you want element animate repeat and return with from there 
+gsap.from(ele,{
+yoyo:boolean
+})
+
+timeline used for order
+const timeline = gsap.timeline();
+
+timeline.to(ele, { duration: 1, x: 300 })
+
+scrolltriggers
+gsap.from("#page2 #box", {
+    duration: 0.3,
+    x: 500,
+    scrollTrigger: {
+        trigger: "#page2 #box", //element which you on apply scroll trigger
+        scroller: "body",
+        start: "top 40%",
+        end: "top 30%",
+        markers: true,
+        scrub: 2,
+        pin: true
+    }
+})

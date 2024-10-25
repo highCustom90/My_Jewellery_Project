@@ -28,7 +28,7 @@ const navigation = [
     { name: 'GIFTS', to: '#', current: false },
     { name: 'ABOUT', to: '/about', current: false },
     { name: 'USERS', to: '/users', current: false },
-]
+];
 
 const userNavigation = [
     { name: 'SELECT COUNTRY' },
@@ -54,7 +54,6 @@ const Navbar = () => {
 
         } else {
             dispatch(ToggleLight);
-
         }
     };
 
@@ -223,7 +222,7 @@ const Navbar = () => {
                 </header>
                 <main>
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 text-center">
-                        <div>
+                        <div data-aos="fade-down">
                             <Typography variant='h3'>HIGH CUSTOM</Typography>
                         </div>
                     </div>

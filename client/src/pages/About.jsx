@@ -1,5 +1,5 @@
 // import { Search } from '@mui/icons-material';
-import { Box, Paper, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { missionPillar } from '../utils/AllImagesProvider';
 
