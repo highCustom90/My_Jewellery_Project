@@ -24,7 +24,7 @@ const Home = () => {
 
     useEffect(() => {
         AOS.init({
-            duration: 1500, // Animation duration
+            duration: 1200, // Animation duration
             once: false, // Whether animation should happen only once
         });
     }, []);

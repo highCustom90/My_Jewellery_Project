@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
 
 const Loader = () => {
 
-    const [progress, setProgress] = React.useState(0);
-    const [buffer, setBuffer] = React.useState(10);
+    const [progress, setProgress] = useState(0);
+    const [buffer, setBuffer] = useState(10);
 
-    const progressRef = React.useRef(() => { });
-    React.useEffect(() => {
+    const progressRef = useRef(() => { });
+    
+    useEffect(() => {
         progressRef.current = () => {
             if (progress === 100) {
                 setProgress(0);
@@ -34,13 +35,11 @@ const Loader = () => {
     }, []);
     return (
         <div>
-
-            <Box sx={{ width: '100%',mt:"15%" }}>
+            <Box sx={{ width: '100%', mt: "15%" }}>
                 <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
             </Box>
-
         </div>
     )
 }
 
-export default Loader
+export default Loader;

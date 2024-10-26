@@ -20,6 +20,7 @@ import { MobileAccordianView } from '../utils/HelperFunctions';
 
 
 const SingleProductDetailShow = () => {
+
   //  all states
   let { shape: getShapeNameForFetchWithShape } = useParams();
   const [value, setValue] = useState({ value: 0, size: 0.5 });
@@ -107,8 +108,8 @@ const SingleProductDetailShow = () => {
 
   useEffect(() => {
     Aos.init({
-      duration: 1500, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1200, // Animation duration
+      once: false, // Whether animation should happen only once
     });
   }, [])
   return (

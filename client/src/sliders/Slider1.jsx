@@ -15,7 +15,7 @@ import 'aos/dist/aos.css';
 const Slider1 = ({ data }) => {
     useEffect(() => {
         AOS.init({
-            duration: 1500, // Animation duration
+            duration: 1200, // Animation duration
             once: false, // Whether animation should happen only once
         });
     }, []);
@@ -33,7 +33,7 @@ const Slider1 = ({ data }) => {
             {data.map(({ url, text }, index) => (
                 <SwiperSlide key={index}>
                     <div data-aos="fade-up"
-                        data-aos-anchor-placement="center-center">
+                    >
                         <img src={url} alt="not found" className='h-full w-full' />
                     </div>
                     <Typography variant='h5' className='sm:hidden lg:block'>{text}</Typography>

@@ -1,7 +1,8 @@
 // import { Search } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { missionPillar } from '../utils/AllImagesProvider';
+import Aos from 'aos';
 
 
 const AboutNav = [
@@ -57,6 +58,13 @@ const last3rdDiv = [
 
 const About = () => {
 
+    useEffect(() => {
+        Aos.init({
+            duration: 1200, // Animation duration
+            once: false, // Whether animation should happen only once
+        });
+    }, [])
+
     return (
         <div>
             <div className='h-[458px]'>
@@ -73,7 +81,7 @@ const About = () => {
 
             <div className='lg:w-[80%] m-auto mt-20'>
                 <Stack direction={"row"} className='justify-around text-wrap flex-wrap'>
-                    <Box className="lg:h-[463px] lg:w-[442px] sm:mb-5 sm:text-center lg:text-left">
+                    <Box className="lg:h-[463px] lg:w-[442px] sm:mb-5 sm:text-center lg:text-left" data-aos="fade-right">
                         <Typography variant='h3' className='sm:text-center lg:text-left'>Our Beginning</Typography>
                         <div className='mb-[16px]'>
                             <Typography>
@@ -86,7 +94,7 @@ const About = () => {
                             </Typography>
                         </div>
                     </Box>
-                    <Box className="lg:w-[675px] lg:h-[463px] sm:text-center lg:text-left overflow-hidden ">
+                    <Box className="lg:w-[675px] lg:h-[463px] sm:text-center lg:text-left overflow-hidden" data-aos="fade-left">
                         <div>
                             <video src="src\assets\videos\rose.mp4" loop autoPlay className='h-full w-full'></video>
                         </div>
@@ -105,7 +113,7 @@ const About = () => {
                     <Typography variant='h4' className='text-center'>Our Mission Pillars</Typography>
                     <div className='flex items-center lg:justify-around sm:justify-center mt-20 flex-wrap'>
                         {missionPillar.map(({ url, text }, index) => (
-                            <Box className="lg:h-[395px] lg:w-[250px] sm:mb-5 sm:text-center lg:text-left" key={index}>
+                            <Box className="lg:h-[395px] lg:w-[250px] sm:mb-5 sm:text-center lg:text-left" key={index} data-aos="fade-up">
                                 <div className='w-[249px] h-[152px] sm:m-auto'>
                                     <img src={url} alt={text[0]} className='h-full w-full' />
                                 </div>
@@ -143,30 +151,46 @@ const About = () => {
             </Stack>
 
             {/* here use map for reduce our code */}
-            <div className='bg-[#c2a1a5] lg:h-[1293px] sm:text-center lg:text-left'>
-                <Typography className='text-center pt-[80px] pb-5' variant='h5'>The Brilliant Earth Difference</Typography>
-                <Stack className='lg:w-[80%] m-auto flex-wrap justify-center items-center' direction={"row"}>
-                    <Box className="lg:w-[560px] lg:h-[350px] flex justify-center lg:items-start flex-col p-4">
-                        <Typography variant='h4' mb={"10px"} className='sm:text-center lg:text-left'>Expertly Designed <br /> Jewelry</Typography>
-                        <Typography>Award-winning designers in our San Francisco studio dream up each piece, <br /> considering every aspect of the distinct design. Then, artisans with masterful <br /> attention to detail bring our jewelry to life, so you can wear it forever.</Typography>
-                    </Box>
-                    <Box className="w-[560px] h-[350px]">
-                        <img src="https://image.brilliantearth.com/cdn-cgi/image/width=600,height=258,quality=100,format=auto/https://www.brilliantearth.com/bee2-ui/img/mission/about/About_BE-Difference_01.jpg" alt="" className='h-full w-full' />
-                    </Box>
-                    <Box className="w-[560px] h-[350px]">
-                        <img src="https://image.brilliantearth.com/cdn-cgi/image/width=600,height=258,quality=100,format=auto/https://www.brilliantearth.com/bee2-ui/img/mission/about/About_BE-Difference_02.jpg" alt="" className='h-full w-full' />
-                    </Box>
-                    <Box className="w-[560px] h-[350px] flex justify-center lg:items-start flex-col p-4">
-                        <Typography variant='h4' mb={"10px"}>Every Piece Crafted <br /> Ethically</Typography>
-                        <Typography>Every aspect of our jewelry is ethically crafted, from the minute the materials <br /> are sourced, to the moment you put it on — because we believe you should <br /> feel good about what you're wearing.</Typography>
-                    </Box>
-                    <Box className="w-[560px] h-[350px] flex justify-center lg:items-start flex-col p-4">
-                        <Typography variant='h4' mb={"10px"}>Uniquely Yours</Typography>
-                        <Typography>We craft our jewelry joyfully, and just for you. Whether it's a made-to-order, <br /> one-of-a-kind engagement ring or a personalized piece of fine jewelry, our <br /> designs reflect the unique story of who you are.</Typography>
-                    </Box>
-                    <Box className="w-[560px] h-[350px]">
-                        <img src="https://image.brilliantearth.com/cdn-cgi/image/width=600,height=258,quality=100,format=auto/https://www.brilliantearth.com/bee2-ui/img/mission/about/About_BE-Difference_03.jpg" alt="" className='h-full w-full' />
-                    </Box>
+            <div className="bg-[#c2a1a5] lg:h-[1293px] text-center lg:text-left pt-[80px] pb-5">
+                <Typography variant="h5" className='text-center mb-3'>The Brilliant Earth Difference</Typography>
+                <Stack className="lg:w-[80%] m-auto flex-wrap justify-center items-center" direction="row">
+                    {[
+                        {
+                            title: "Expertly Designed Jewelry",
+                            description: "Award-winning designers in our San Francisco studio dream up each piece, considering every aspect of the distinct design. Then, artisans with masterful attention to detail bring our jewelry to life, so you can wear it forever.",
+                        },
+                        {
+                            imgSrc: "https://image.brilliantearth.com/cdn-cgi/image/width=600,height=258,quality=100,format=auto/https://www.brilliantearth.com/bee2-ui/img/mission/about/About_BE-Difference_01.jpg",
+                            alt: "Jewelry Design"
+                        },
+                        {
+                            imgSrc: "https://image.brilliantearth.com/cdn-cgi/image/width=600,height=258,quality=100,format=auto/https://www.brilliantearth.com/bee2-ui/img/mission/about/About_BE-Difference_02.jpg",
+                            alt: "Ethically Crafted"
+                        },
+                        {
+                            title: "Every Piece Crafted Ethically",
+                            description: "Every aspect of our jewelry is ethically crafted, from the minute the materials are sourced, to the moment you put it on — because we believe you should feel good about what you're wearing.",
+                        },
+                        {
+                            title: "Uniquely Yours",
+                            description: "We craft our jewelry joyfully, and just for you. Whether it's a made-to-order, one-of-a-kind engagement ring or a personalized piece of fine jewelry, our designs reflect the unique story of who you are.",
+                        },
+                        {
+                            imgSrc: "https://image.brilliantearth.com/cdn-cgi/image/width=600,height=258,quality=100,format=auto/https://www.brilliantearth.com/bee2-ui/img/mission/about/About_BE-Difference_03.jpg",
+                            alt: "Personalized Jewelry"
+                        }
+                    ].map((item, index) => (
+                        item.imgSrc ? (
+                            <Box key={index} className="w-[560px] h-[350px]" data-aos="zoom-in">
+                                <img src={item.imgSrc} alt={item.alt} className="h-full w-full" />
+                            </Box>
+                        ) : (
+                            <Box key={index} className="w-[560px] h-[350px] flex flex-col justify-center lg:items-start p-4" data-aos="zoom-in">
+                                <Typography variant="h4" mb="10px">{item.title}</Typography>
+                                <Typography>{item.description}</Typography>
+                            </Box>
+                        )
+                    ))}
                 </Stack>
             </div>
 

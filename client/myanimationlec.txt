@@ -35,3 +35,27 @@ gsap.from("#page2 #box", {
         pin: true
     }
 })
+
+locomotive for scrolling
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true,
+    lerp: 0 //take value between 0 and 1
+});
+  <div id="main" data-scroll-container>
+        <div id="page1" data-scroll>
+            <div data-scroll data-scroll-speed="use any value" data-scroll-direction="any direction horizontal vertical"></div>
+            <div data-scroll data-scroll-speed="use any value" data-scroll-direction="any direction horizontal vertical"></div>
+            <div data-scroll data-scroll-speed="use any value" data-scroll-direction="any direction horizontal vertical"></div>
+        </div>
+        <div id="page2"></div>
+        <div id="page3"></div>
+    </div>
+
+lennis for scroll animation
+const lenis = new Lenis()
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)

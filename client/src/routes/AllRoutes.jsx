@@ -22,6 +22,7 @@ const AllRoutes = () => {
                 <Route path="/jewelry" element={<Jewelry />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/*" element={<h1>Page Not Fount</h1>} />
             </Routes>
             <Toaster position="top-center" />
         </div>
