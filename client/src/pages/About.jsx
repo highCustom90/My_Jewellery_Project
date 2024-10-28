@@ -1,8 +1,8 @@
 // import { Search } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
+import Aos from 'aos';
 import React, { useEffect } from 'react';
 import { missionPillar } from '../utils/AllImagesProvider';
-import Aos from 'aos';
 
 
 const AboutNav = [

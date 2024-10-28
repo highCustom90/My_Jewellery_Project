@@ -27,7 +27,6 @@ const navigation = [
     { name: 'JEWELRY', to: '/jewelry', current: false },
     { name: 'GIFTS', to: '#', current: false },
     { name: 'ABOUT', to: '/about', current: false },
-    { name: 'USERS', to: '/users', current: false },
 ];
 
 const userNavigation = [
@@ -97,7 +96,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <input type="checkbox" value="synthwave" className="toggle theme-controller" onChange={themeHandler} />
+                            <input type="checkbox" value="synthwave" className="toggle theme-controller" onChange={themeHandler} title='toggle theme' />
                             <div className="hidden md:block">
                                 <div className="ml-4 flex items-center md:ml-6">
                                     <button
