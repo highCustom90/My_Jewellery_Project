@@ -31,4 +31,4 @@ async function deleteCartItem(req, res) {
     await findUserWhenSignIn.save();
     res.send("Item deleted from cart");
 }
-module.exports = { addToCartController, deleteCartItem, getCartData };
+module.exports = { addToCartController, deleteCartItem, getCartData };  
