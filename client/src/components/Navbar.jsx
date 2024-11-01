@@ -27,8 +27,12 @@ const navigation = [
     { name: 'JEWELRY', to: '/jewelry', current: false },
     { name: 'GIFTS', to: '#', current: false },
     { name: 'ABOUT', to: '/about', current: false },
+<<<<<<< HEAD
     { name: 'USERS', to: '/users', current: false },
 ]
+=======
+];
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
 
 const userNavigation = [
     { name: 'SELECT COUNTRY' },
@@ -54,7 +58,10 @@ const Navbar = () => {
 
         } else {
             dispatch(ToggleLight);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
         }
     };
 
@@ -98,7 +105,11 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <input type="checkbox" value="synthwave" className="toggle theme-controller" onChange={themeHandler} />
+=======
+                            <input type="checkbox" value="synthwave" className="toggle theme-controller" onChange={themeHandler} title='toggle theme' />
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
                             <div className="hidden md:block">
                                 <div className="ml-4 flex items-center md:ml-6">
                                     <button
@@ -223,7 +234,11 @@ const Navbar = () => {
                 </header>
                 <main>
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
                         <div>
+=======
+                        <div data-aos="fade-down">
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
                             <Typography variant='h3'>HIGH CUSTOM</Typography>
                         </div>
                     </div>

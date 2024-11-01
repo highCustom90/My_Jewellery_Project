@@ -2,6 +2,7 @@
     "rings": {
         "round": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045832/BE1D54_rose_Round_top_50_carat_nm5nsa.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045675/BE1D54_RD_50ct_rose_side2_i03zev.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045674/BE1D54_RD_50ct_rose_side1_nvjh0n.webp",
@@ -42,10 +43,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045766/BE1D54_yellow_Round_top_2_carat_s1q1zn.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045796/BE1D54_yellow_Round_top_250_carat_qczcex.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045826/BE1D54_yellow_Round_top_3_carat_cwwtte.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602987/round_h43y13.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602982/BE1D54_RD_50ct_rose_side2_i03zev_iom6jo.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602980/BE1D54_RD_50ct_rose_side1_nvjh0n_tk4xvs.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602989/round_aioluq.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602985/BE1D54_RD_50ct_white_side2_ig4iq1_dl1xjk.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602983/BE1D54_RD_50ct_white_side1_wvilkb_gi8dne.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602998/round_hj81fj.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602989/BE1D54_RD_50ct_yellow_side2_j7mw9j_stmjp7.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602988/BE1D54_RD_50ct_yellow_side1_v19orv_b6ja2f.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602987/round_h43y13.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596637/round_ccew98.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598447/round_x78ip8.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603715/round_qjym8o.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603185/round_wwkrmj.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603386/round-1_tn6i7c.webp"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602989/round_aioluq.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596638/round_dbwmqo.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598448/round_qaqsat.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603727/round_aoimov.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603190/round_yroros.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603393/BE1D54_white_Round_top_3_carat_a9u8se_oywsjv.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602998/round_hj81fj.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596640/round_wmnahx.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598450/round_lniooq.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603739/round_d4hteg.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603194/round_crczvt.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603397/BE1D54_yellow_Round_top_3_carat_cwwtte_gzkplv.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "princess": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045828/BE1D54_rose_Princess_top_50_carat_drhsyo.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045826/BE1D54_PC_50ct_rose_side1_mevchk.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045671/BE1D54_PC_50ct_rose_side2_mj8v0d.webp",
@@ -86,10 +130,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045760/BE1D54_yellow_Princess_top_2_carat_pe3i3a.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045790/BE1D54_yellow_Princess_top_250_carat_cnxyqq.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045821/BE1D54_yellow_Princess_top_3_carat_ey11bw.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602964/princess_tclvid.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602960/BE1D54_PC_50ct_rose_side2_mj8v0d_anubtt.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602959/BE1D54_PC_50ct_rose_side1_mevchk_pr2xuh.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602970/princess_u7rvg3.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602963/BE1D54_PC_50ct_white_side2_vemz9m_ztgfwe.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602962/BE1D54_PC_50ct_white_side1_bqdsm3_lqzsyi.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602971/princess_ciqghe.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602967/BE1D54_PC_50ct_yellow_side2_jpxubz_vzdvl9.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602966/BE1D54_PC_50ct_yellow_side1_lnpviv_kcwzmo.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602964/princess_tclvid.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596628/princess_roxuza.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598438/princess_zotdlk.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603644/princess_z3cxro.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603161/princess_uvt9a2.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603295/princess_odm43k.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602970/princess_u7rvg3.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596630/princess_fdkga5.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598440/princess_uhgtiq.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603656/princess_jynbkr.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603165/princess_f7wwcw.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603301/princess_rbelv1.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602971/princess_ciqghe.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596631/princess_w1cbzs.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598441/princess_avictb.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603668/princess_dkxcbl.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603170/princess_fu3qii.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603304/princess_fljk8k.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "cushion": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045658/BE1D54_rose_Cushion_top_50_carat_ytmzxt.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045655/BE1D54_CU_50ct_rose_side2_dnaoot.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045655/BE1D54_CU_50ct_rose_side1_wgfyqm.webp",
@@ -130,10 +217,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045742/BE1D54_yellow_Cushion_top_2_carat_nzdxxc.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045772/BE1D54_yellow_Cushion_top_250_carat_dlv0ax.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045802/BE1D54_yellow_Cushion_top_3_carat_zk1bws.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602897/cushion_dfc4m0.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602894/BE1D54_CU_50ct_rose_side2_dnaoot_preeax.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602892/BE1D54_CU_50ct_rose_side1_wgfyqm_tzzlpk.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602899/cushion_ekcci8.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602897/BE1D54_CU_50ct_white_side2_ei4363_ba10ug.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602896/BE1D54_CU_50ct_white_side1_vlxbx3_ivoeba.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602905/cushion_jikkic.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602901/BE1D54_CU_50ct_yellow_side2_kakpqy_uh2hnm.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602900/BE1D54_CU_50ct_yellow_side1_e0tdcm_cldjrf.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602897/cushion_dfc4m0.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596579/cushion_bqxeoa.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596646/cushion_z1qex3.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598457/cushion_sl0aqf.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603085/cushion_ibcamg.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603217/cushion_ffinay.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602899/cushion_ekcci8.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596603/cushion_mpwiwc.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598415/cushion_lya49i.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598458/cushion_vjmpzn.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603089/cushion_o6bjli.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603222/cushion_pjvpqu.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602905/cushion_jikkic.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596604/cushion_wlyea9.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598416/cushion_udd0bh.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598459/cushion_tb5fah.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603094/cushion_wc18k4.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603225/cushion_ipbs6d.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "oval": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045835/BE1D54_rose_Oval_top_50_carat_hdwyco.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045666/BE1D54_OV_50ct_rose_side2_oztldd.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045666/BE1D54_OV_50ct_rose_side1_phv1bs.webp",
@@ -174,10 +304,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045754/BE1D54_yellow_Oval_top_2_carat_xeq9cw.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045784/BE1D54_yellow_Oval_top_250_carat_hxlqk9.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045816/BE1D54_OV_300ct_yellow_side1_adxs5r.jpg"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602944/oval_j5gthz.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602938/BE1D54_OV_50ct_rose_side2_oztldd_e95ymg.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602937/BE1D54_OV_50ct_rose_side1_phv1bs_nxkijn.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602945/oval_hy1ee7.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602942/BE1D54_OV_50ct_white_side2_cbmz2q_anjaei.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602940/BE1D54_OV_50ct_white_side1_dg44rb_ransq1.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602950/oval_xaemlh.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602945/BE1D54_OV_50ct_yellow_side2_gbgnwa_nprkot.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602944/BE1D54_OV_50ct_yellow_side1_fiuze1_ykqfrt.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602944/oval_j5gthz.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596619/oval_dlrpux.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598430/oval_lay7cn.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598474/oval_ynbifb.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603135/oval_djbgyz.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603270/oval_phk4jf.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602945/oval_hy1ee7.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596621/oval_cvdyng.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598431/oval_ps4or2.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598475/oval_h0klgi.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603143/oval_uqaj2s.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603275/oval_kwpvjr.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602950/oval_xaemlh.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596622/oval_x6wlld.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598433/oval_qm2adb.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598478/oval_ld0pat.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603145/oval_qalrlt.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603277/oval_pekjzp.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "emerald": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045834/BE1D54_rose_Emerald_top_50_carat_frf4el.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045661/BE1D54_EM_50ct_rose_side1_zlnwec.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045661/BE1D54_EM_50ct_rose_side2_ciszus.webp",
@@ -218,10 +391,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045745/BE1D54_yellow_Emerald_top_2_carat_rtteeg.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045775/BE1D54_yellow_Emerald_top_250_carat_-_Copy_txmylc.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045805/BE1D54_yellow_Emerald_top_3_carat_eoev7d.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602908/emerald_uv808e.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602905/BE1D54_EM_50ct_rose_side2_ciszus_whtaps.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602903/BE1D54_EM_50ct_rose_side1_zlnwec_iktwwp.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602912/emerald_gfwjun.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602908/BE1D54_EM_50ct_white_side2_jdqqpq_vyzsjh.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602907/BE1D54_EM_50ct_white_side1_ibhxdo_tzi8rr.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602914/emerald_wqento.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602912/BE1D54_EM_50ct_yellow_side2_qtsqkc_pfowhy.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602911/BE1D54_EM_50ct_yellow_side1_q9ofda_y8whxd.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602908/emerald_uv808e.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596606/emerald_d5ffga.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598417/emerald_rf7ip6.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598461/emerald_i0mih0.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603099/emerald_xeq8wc.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603231/emerald_awaqgc.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602912/emerald_gfwjun.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596607/emerald_vptq7f.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598418/emerald_yqwfpl.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598462/emerald_xt8adc.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603103/emerald_efmtmp.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603234/emerald_cro4tu.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602914/emerald_wqento.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596609/emerald_jlr5xp.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598420/emerald_oqzr0h.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598463/emerald_l3wsvl.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603118/emerald_yjjkhp.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603237/emerald_tmu6uw.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "asser": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045831/BE1D54_rose_Asscher_top_50_carat_kfuqd7.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045829/BE1D54_AS_50ct_rose_side1_xgnnns.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045654/BE1D54_AS_50ct_rose_side2_yhmzpd.webp",
@@ -262,10 +478,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045739/BE1D54_yellow_Asscher_top_2_carat_oixiup.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045769/BE1D54_yellow_Asscher_top_250_carat_atjpoa.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045799/BE1D54_yellow_Asscher_top_3_carat_lkpyje.webp"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602881/asser_mknkfj.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602881/BE1D54_AS_50ct_rose_side2_yhmzpd_innem4.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602884/round_umdndd.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602888/asser_orj89t.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602887/BE1D54_AS_50ct_white_side2_zdlzev_wrhahr.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602886/BE1D54_AS_50ct_white_side1_gqj9cd_yjfo6r.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602891/asser_rn2t2n.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602891/BE1D54_AS_50ct_yellow_side2_focbkx_hkmibg.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602890/BE1D54_AS_50ct_yellow_side1_audpkt_uim28f.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602881/asser_mknkfj.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596576/asser_uywa86.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596640/asser_gdx1tc.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598451/asser_oeanvw.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603078/asser_ryiny7.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603200/asser_egkxai.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602888/asser_orj89t.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596575/asser_b5ethi.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596642/asser_dcwkxi.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598453/asser_dmlkqr.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603074/asser_ta8kg3.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603204/asser_ojll1a.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602891/asser_rn2t2n.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596576/asser_e0ii3b.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596643/asser_mrwn5r.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598454/cushion_bictlj.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603078/asser_ydxh4j.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603209/asser_zhv79u.webp"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "marquise": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045666/BE1D54_rose_Marquise_top_50_carat_qpf7bx.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045665/BE1D54_MQ_50ct_rose_side2_fbuy8p.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045665/BE1D54_MQ_50ct_rose_side1_rn8qor.webp",
@@ -306,10 +565,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045751/BE1D54_yellow_Marquise_top_2_carat_ttp7cy.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045781/BE1D54_yellow_Marquise_top_250_carat_bjvtof.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045811/BE1D54_yellow_Marquise_top_3_carat_s7uha3.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602931/marquise_wofcsd.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602927/BE1D54_MQ_50ct_rose_side2_fbuy8p_ilulxs.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602925/BE1D54_MQ_50ct_rose_side1_rn8qor_ntnee2.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602933/marquise_dsjt2s.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602931/pear_xmo2a7.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602929/BE1D54_MQ_50ct_white_side1_rw6jgc_mw5tom.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602936/marquise_y5z7yl.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602935/pear_recbm9.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602933/BE1D54_MQ_50ct_yellow_side1_uepcnd_qay8db.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602931/marquise_wofcsd.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596614/marquise_v0fdtn.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598425/marquise_qptnal.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598471/marquise_fsjczs.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603124/marquise_ppzilr.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603258/marquise_qwyic3.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602933/marquise_dsjt2s.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596617/marquise_dgfcnk.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598427/marquise_raqydq.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598471/marquise_fzrspa.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603127/marquise_n1lajn.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603261/marquise_yplwll.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602936/marquise_y5z7yl.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596617/marquise_uri6lw.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598428/marquise_qy3ast.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598473/marquise_mmdrz6.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603131/marquise_xgamik.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603266/marquise_wlwutm.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "radiant": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045834/BE1D54_rose_Radiant_top_50_carat_mco2hy.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045673/BE1D54_RA_50ct_rose_side2_svxwaw.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045672/BE1D54_RA_50ct_rose_side1_bw0mm0.webp",
@@ -350,10 +652,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045763/BE1D54_yellow_Radiant_top_2_carat_e5jbur.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045793/BE1D54_yellow_Radiant_top_250_carat_heis5q.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045823/BE1D54_yellow_Radiant_top_3_carat_uhy36n.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602977/radiant_nozywl.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602971/BE1D54_RA_50ct_rose_side2_svxwaw_mvrsaa.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602969/BE1D54_RA_50ct_rose_side1_bw0mm0_dkuqax.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602979/radiant_pnmg1y.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602974/BE1D54_RA_50ct_white_side2_h3olwx_ryupwh.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602973/BE1D54_RA_50ct_white_side1_ghelji_tpyiop.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602982/radiant_itsfhv.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602978/BE1D54_RA_50ct_yellow_side2_r6smcp_rmumkq.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602977/BE1D54_RA_50ct_yellow_side1_zq6xi3_aekd7y.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602977/radiant_nozywl.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596632/radiant_qihmoh.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598443/radiant_donszz.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603679/radiant_kjnaov.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603174/radiant_a6d6xa.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603376/radiant_mrw8ls.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602979/radiant_pnmg1y.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596633/1_aerltv_jhgovs.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598444/radiant_hdzfhi.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603691/radiant_ig0vwd.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603178/radiant_hj5tkz.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603382/radiant_lcqguk.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602982/radiant_itsfhv.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596635/radiant_mwusng.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598446/radiant_sjyrjc.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603703/radiant_nqravw.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603183/radiant_uxlbem.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603385/radiant_xh5mim.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "pear": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045669/BE1D54_rose_Pear_top_50_carat_tdaphb.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045668/BE1D54_PS_50ct_rose_side2_z1o6xm.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045668/BE1D54_PS_50ct_rose_side1_j8h8yq.webp",
@@ -394,10 +739,53 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045757/BE1D54_yellow_Pear_top_2_carat_n5hmh1.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045787/BE1D54_yellow_Pear_top_250_carat_h3erce.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045817/BE1D54_yellow_Pear_top_3_carat_lbxvns.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602953/pear_bmbjdg.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602949/BE1D54_PS_50ct_rose_side2_z1o6xm_kgenap.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602948/BE1D54_PS_50ct_rose_side1_j8h8yq_s16yva.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602955/pear_uslmxh.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602953/BE1D54_PS_50ct_white_side2_a48gtx_devn6m.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602951/BE1D54_PS_50ct_white_side1_h1ks9g_nupptc.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602960/pear_ktdhg8.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602956/BE1D54_PS_50ct_yellow_side2_csb41v_fs3nlw.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602955/BE1D54_PS_50ct_yellow_side1_jdi5oj_iztn1r.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602953/pear_bmbjdg.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596623/pear_khoccp.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598434/pear_osd7y8.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603751/pear_splvza.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603150/pear_byqt4l.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603282/pear_j3aav4.webp"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602955/pear_uslmxh.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596625/pear_mqprox.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598435/pear_nicsyt.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603763/pear_mwe3ag.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603153/pear_bbuixq.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603289/pear_pxjfuu.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602960/pear_ktdhg8.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596626/pear_wmqqdq.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598437/pear_nx65hn.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603774/pear_toacuc.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603156/pear_x8g6ag.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603291/pear_r4hcdg.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         },
         "heart": {
             "rose": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045811/BE1D54_rose_Heart_top_3_carat_a487u5.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045806/BE1D54_HT_300ct_rose_side2_agtnh0.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045805/BE1D54_HT_300ct_rose_side1_j3fwkz.webp",
@@ -438,6 +826,48 @@
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045747/BE1D54_white_Heart_top_2_carat_z3riqa.webp",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045777/BE1D54_white_Heart_top_250_carat_upczib.png",
                 "https://res.cloudinary.com/dedhgrb2a/image/upload/v1728045807/BE1D54_white_Heart_top_3_carat_sjmtoz.png"
+=======
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602920/heart_kmnzac.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602916/BE1D54_HT_50ct_rose_side2_iuzdwg_m51axa.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602914/BE1D54_HT_50ct_rose_side1_twbmt7_z4wd63.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "white": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602922/heart_wegkid.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602919/BE1D54_HT_50ct_white_side2_ftf7pl_gmuzyj.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602918/BE1D54_HT_50ct_white_side1_woisec_fbnnrz.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "gold": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602927/heart_y72hef.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602923/BE1D54_HT_50ct_yellow_side2_v1pnaf_wxvcxf.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602922/BE1D54_HT_50ct_yellow_side1_e7fvrw_q9q7sa.webp",
+                "/src/assets/images/hand.png"
+            ],
+            "Rosesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602920/heart_kmnzac.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596610/heart_od5kay.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598421/heart_vxlg7o.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598465/heart_daaxsg.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603114/heart_ejbxhc.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603242/heart_cojmbh.png"
+            ],
+            "Goldsizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602927/heart_y72hef.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596613/heart_xslouq.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598424/heart_h9qd2b.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598468/heart_rwsami.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603126/heart_kkdjhh.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603253/heart_ocyyuc.png"
+            ],
+            "Whitesizes": [
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729602922/heart_wegkid.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729596611/heart_q4yjfu.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598423/heart_vpjsjm.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729598467/heart_rkspxn.webp",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729603115/heart_hdvnej.png",
+                "https://res.cloudinary.com/dedhgrb2a/image/upload/v1729682100/BE1D54_white_Heart_top_3_carat_pa8ogu.png"
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             ]
         }
     }

@@ -49,9 +49,15 @@ const EngagementImageChanger = () => {
     return loading ? <Loader /> : (
         <Stack direction="row" flexWrap="wrap" justifyContent="space-between" alignItems="center" className='mt-14 sm:justify-center'>
             {images.map(({ url, display_name }, index) => (
+<<<<<<< HEAD
                 <Box key={index} width="290px" height="376px" className="mb-8 text-center m-auto" data-aos="zoom-in">
                     <Link to={`/singleprdetail/${display_name}`}>
                         <img src={url} alt={"text"} className='h-full w-full object-cover object-center' />
+=======
+                <Box key={index} width="290px" height="376px" className="mb-8 text-center m-auto overflow-hidden" data-aos="zoom-in">
+                    <Link to={`/singleprdetail/${display_name}`}>
+                        <img src={url} alt={"text"} className='hover:scale-[1.1] transition-all duration-300 object-cover h-full w-full object-center' />
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
                     </Link>
                     <Typography>{display_name}</Typography>
                 </Box>

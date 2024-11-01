@@ -6,6 +6,10 @@ import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import StarIcon from '@mui/icons-material/Star';
 import { Avatar, Box, Button, Slider, Stack, Typography } from '@mui/material';
 import Modal from '@mui/material/Modal';
+<<<<<<< HEAD
+=======
+import Aos from 'aos';
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
@@ -17,7 +21,13 @@ import { MediaQueryInMobileViewSlider, Slider1 } from '../sliders/Slider1';
 import { diamondTypeImage, multipleProductImage, otherEngagementRingImage, recentlyViewedImage } from '../utils/AllImagesProvider';
 import { MobileAccordianView } from '../utils/HelperFunctions';
 
+<<<<<<< HEAD
 const SingleProductDetailShow = () => {
+=======
+
+const SingleProductDetailShow = () => {
+
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
   //  all states
   let { shape: getShapeNameForFetchWithShape } = useParams();
   const [value, setValue] = useState({ value: 0, size: 0.5 });
@@ -103,6 +113,15 @@ const SingleProductDetailShow = () => {
     fetchFromDb();
   }, [getShapeNameWhenClick]);
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    Aos.init({
+      duration: 1200, // Animation duration
+      once: false, // Whether animation should happen only once
+    });
+  }, [])
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
   return (
     <>
       <div className='flex lg:w-[80%] mdi:w-[80%] m-auto sm:flex-col lg:flex-row overflow-hidden'>
@@ -110,14 +129,23 @@ const SingleProductDetailShow = () => {
           <div className='lg:flex sm:hidden lg:w-[100%] flex-wrap lg:justify-between sm:justify-around items-center'>
             {/* here we use multipleProdcutImage array */}
             {marquise.map((url, index) => (
+<<<<<<< HEAD
               <Box className="mb-5 lg:w-[340px] lg:h-[340px] sm:w-[150px] sm:h-[150px]" key={index}>
+=======
+              <Box className="mb-5 lg:w-[340px] lg:h-[340px] sm:w-[150px] sm:h-[150px]" key={index} data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine">
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
                 <img
                   className='h-full w-full relative'
                   src={index == 0 ? diamondSize[value.value] : url}
                   alt="something went wrong"
                   style={index === 3 ? { filter: `brightness(${skinTone}%)` } : {}}
                 />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
                 {index === 3 &&
                   <Box sx={{ height: "150px" }} className="relative">
                     <Slider
@@ -289,7 +317,11 @@ const SingleProductDetailShow = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
+=======
+      </div >
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
 
       <div className='lg:w-[80%] mdi:w-[80%] m-auto mt-20'>
         <Typography variant='h6'>Other Engagement Rings You'll Love</Typography>

@@ -21,6 +21,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0",
     "nodemon": "^3.1.7",
+<<<<<<< HEAD
+=======
+    "razorpay": "^2.9.5",
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
     "redis": "^4.7.0"
   }
 }

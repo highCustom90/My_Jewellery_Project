@@ -15,7 +15,11 @@ import 'aos/dist/aos.css';
 const Slider1 = ({ data }) => {
     useEffect(() => {
         AOS.init({
+<<<<<<< HEAD
             duration: 1500, // Animation duration
+=======
+            duration: 1200, // Animation duration
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
             once: false, // Whether animation should happen only once
         });
     }, []);
@@ -33,7 +37,11 @@ const Slider1 = ({ data }) => {
             {data.map(({ url, text }, index) => (
                 <SwiperSlide key={index}>
                     <div data-aos="fade-up"
+<<<<<<< HEAD
                         data-aos-anchor-placement="center-center">
+=======
+                    >
+>>>>>>> 4362160a3797a90a29e1ba08c7105a41d4ea7fb3
                         <img src={url} alt="not found" className='h-full w-full' />
                     </div>
                     <Typography variant='h5' className='sm:hidden lg:block'>{text}</Typography>
